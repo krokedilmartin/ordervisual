@@ -1,0 +1,1322 @@
+{
+  "orders": {
+    "1813": {
+      "wc_order": {
+        "id": 1813,
+        "parent_id": 0,
+        "status": "processing",
+        "currency": "SEK",
+        "version": "9.6.2",
+        "prices_include_tax": false,
+        "date_created": {
+          "date": "2025-02-17 21:06:51.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "date_modified": {
+          "date": "2025-02-17 21:07:19.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "discount_total": "0",
+        "discount_tax": "0",
+        "shipping_total": "49",
+        "shipping_tax": "12.25",
+        "cart_tax": "141.25",
+        "total": "767.50",
+        "total_tax": "153.5",
+        "customer_id": 1,
+        "order_key": "wc_order_a1pzI23QXZ7vc",
+        "billing": {
+          "first_name": "Anna",
+          "last_name": "Larson",
+          "company": "",
+          "address_1": "Lilla Tvärgatan 8",
+          "address_2": "Address Line 2",
+          "city": "Löberöd",
+          "state": "",
+          "postcode": "241 62",
+          "country": "SE",
+          "email": "checkout-se@testdrive.klarna.com",
+          "phone": "07200000001"
+        },
+        "shipping": {
+          "first_name": "Anna",
+          "last_name": "Larson",
+          "company": "",
+          "address_1": "Lilla Tvärgatan 8",
+          "address_2": "Address Line 2",
+          "city": "Löberöd",
+          "state": "",
+          "postcode": "241 62",
+          "country": "SE",
+          "phone": "07200000001"
+        },
+        "payment_method": "klarna_payments",
+        "payment_method_title": "Klarna",
+        "transaction_id": "d2c3c127-6e00-4b1f-8542-e20c3f378bc1",
+        "customer_ip_address": "81.234.27.236",
+        "customer_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+        "created_via": "store-api",
+        "customer_note": "",
+        "date_completed": null,
+        "date_paid": {
+          "date": "2025-02-17 21:07:19.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "cart_hash": "fa152f3f790d02b3a2aea3e54cee062e",
+        "order_stock_reduced": true,
+        "download_permissions_granted": true,
+        "new_order_email_sent": false,
+        "recorded_sales": true,
+        "recorded_coupon_usage_counts": true,
+        "number": "kp-1377-demo",
+        "meta_data": [
+          {
+            "id": 61470,
+            "key": "_shipping_hash",
+            "value": "9d4568c009d203ab10e33ea9953a0264"
+          },
+          {
+            "id": 61471,
+            "key": "_coupons_hash",
+            "value": "d751713988987e9331980363e24189ce"
+          },
+          {
+            "id": 61472,
+            "key": "_fees_hash",
+            "value": "d751713988987e9331980363e24189ce"
+          },
+          {
+            "id": 61473,
+            "key": "_taxes_hash",
+            "value": "2d79212761aa06c1b4b65264af1fb4ed"
+          },
+          {
+            "id": 61474,
+            "key": "is_vat_exempt",
+            "value": "no"
+          },
+          {
+            "id": 61475,
+            "key": "_order_total_base_currency",
+            "value": "767.50"
+          },
+          {
+            "id": 61476,
+            "key": "_cart_discount_base_currency",
+            "value": "0"
+          },
+          {
+            "id": 61477,
+            "key": "_order_shipping_base_currency",
+            "value": "49"
+          },
+          {
+            "id": 61478,
+            "key": "_order_tax_base_currency",
+            "value": "141.25"
+          },
+          {
+            "id": 61479,
+            "key": "_order_shipping_tax_base_currency",
+            "value": "12.25"
+          },
+          {
+            "id": 61480,
+            "key": "_cart_discount_tax_base_currency",
+            "value": "0"
+          },
+          {
+            "id": 61481,
+            "key": "_base_currency_exchange_rate",
+            "value": "1"
+          },
+          {
+            "id": 61588,
+            "key": "_order_number",
+            "value": "1377"
+          },
+          {
+            "id": 61589,
+            "key": "_order_number_formatted",
+            "value": "kp-1377-demo"
+          },
+          {
+            "id": 61590,
+            "key": "_order_number_meta",
+            "value": "1377"
+          },
+          {
+            "id": 61591,
+            "key": "_kp_session_data",
+            "value": "{\"klarna_session\":{\"client_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjgyMzA1ZWJjLWI4MTEtMzYzNy1hYTRjLTY2ZWNhMTg3NGYzZCJ9.eyJzZXNzaW9uX2lkIjoiMTZiZjQ5NTEtOWU5Yi02M2U0LWEwNDMtMWUzNzJiMDdiZTI2IiwiYmFzZV91cmwiOiJodHRwczovL2pzLnBsYXlncm91bmQua2xhcm5hLmNvbS9ldS9rcCIsImRlc2lnbiI6ImtsYXJuYSIsImxhbmd1YWdlIjoiZW4iLCJwdXJjaGFzZV9jb3VudHJ5IjoiU0UiLCJlbnZpcm9ubWVudCI6InBsYXlncm91bmQiLCJtZXJjaGFudF9uYW1lIjoiUGxheWdyb3VuZCBEZW1vIE1lcmNoYW50Iiwic2Vzc2lvbl90eXBlIjoiUEFZTUVOVFMiLCJjbGllbnRfZXZlbnRfYmFzZV91cmwiOiJodHRwczovL2V1LnBsYXlncm91bmQua2xhcm5hZXZ0LmNvbSIsInNjaGVtZSI6dHJ1ZSwiZXhwZXJpbWVudHMiOlt7Im5hbWUiOiJrcGMtcHNlbC00NDI5IiwidmFyaWF0ZSI6ImEifSx7Im5hbWUiOiJrcC1jbGllbnQtb25lLXB1cmNoYXNlLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3BjLTFrLXNlcnZpY2UiLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3AtY2xpZW50LXV0b3BpYS1zdGF0aWMtd2lkZ2V0IiwidmFyaWF0ZSI6ImluZGV4IiwicGFyYW1ldGVycyI6eyJkeW5hbWljIjoidHJ1ZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoiaW4tYXBwLXNkay1uZXctaW50ZXJuYWwtYnJvd3NlciIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6Im5ldy1pbnRlcm5hbC1icm93c2VyLWVuYWJsZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLXNkay1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImtwLWNsaWVudC11dG9waWEtd2Vidmlldy1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImluLWFwcC1zZGstY2FyZC1zY2FubmluZyIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6ImNhcmQtc2Nhbm5pbmctZW5hYmxlIn19XSwicmVnaW9uIjoiZXUiLCJvcmRlcl9hbW91bnQiOjU5ODc1LCJvZmZlcmluZ19vcHRzIjoyLCJvbyI6ImQyIiwidmVyc2lvbiI6InYxLjEwLjAtMTU5MC1nM2ViYzM5MDciLCJpIjoiYnQifQ.I9AZJvuLl2B-_8huYVxfkapctPaNyiLSbYKqYwkjF0gzJ6akVOKXBEdMJF1BgVUlK9kc4E-6zDO0NeH9E31F69m2EiWBm7D19w9QySRBZTpRfNmBhSLr-J6SjngNNzs-xM4tN8-u3_bfsBmu-84i7SkGwSt7N539aeqvJrvb0TSSHupRaM_Mwj4u_iqZu8VTvYAzreovVkpPmq5c3rJtGBm2tzUQ-o_W5vgu5smLPb9zcwAT7FoXsDPkjtp8S4IYbXvpZo5zrbrwQ-g7x13-xvBUzw2b4Ldf-PDqeiMEppKwgLqf4Hmp0ukmOSBqb0tLskx4XiROYgfu5JBfPtgkfQ\",\"payment_method_categories\":[{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_over_time\",\"name\":\"Monthly financing\"},{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_later\",\"name\":\"Buy now, pay later\"},{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_now\",\"name\":\"Pay now\"}],\"session_id\":\"16bf4951-9e9b-63e4-a043-1e372b07be26\"},\"session_hash\":\"c519ee7cf570945297ee14f3ea8b79da\",\"session_country\":\"SE\",\"session_locale\":\"en_US\"}"
+          },
+          {
+            "id": 61592,
+            "key": "_wc_klarna_environment",
+            "value": "test"
+          },
+          {
+            "id": 61593,
+            "key": "_wc_klarna_country",
+            "value": "SE"
+          },
+          {
+            "id": 61594,
+            "key": "_kp_session_id",
+            "value": "16bf4951-9e9b-63e4-a043-1e372b07be26"
+          },
+          {
+            "id": 61598,
+            "key": "_wc_klarna_order_id",
+            "value": "d2c3c127-6e00-4b1f-8542-e20c3f378bc1"
+          },
+          {
+            "id": 61599,
+            "key": "_krokedil_environment_info",
+            "value": {
+              "php_version": "8.3.8",
+              "wc_version": "9.6.2",
+              "wp_version": "6.7.2",
+              "plugin_version": "3.9.2"
+            }
+          },
+          {
+            "id": 61600,
+            "key": "_ppu_upsell_ids",
+            "value": [
+              "5ffffbb9-ec7f-470a-9d71-ad70fda1bb3a"
+            ]
+          }
+        ],
+        "line_items": {
+          "7893": {
+            "id": 7893,
+            "order_id": 1813,
+            "name": "Hoodie",
+            "product_id": 16,
+            "variation_id": 0,
+            "quantity": 1,
+            "tax_class": "",
+            "subtotal": "350",
+            "subtotal_tax": "87.5",
+            "total": "350",
+            "total_tax": "87.5",
+            "taxes": {
+              "total": {
+                "26": "87.5"
+              },
+              "subtotal": {
+                "26": "87.5"
+              }
+            },
+            "meta_data": [
+              {
+                "id": 65090,
+                "key": "_line_subtotal_base_currency",
+                "value": "350"
+              },
+              {
+                "id": 65092,
+                "key": "_line_subtotal_tax_base_currency",
+                "value": "87.5"
+              },
+              {
+                "id": 65094,
+                "key": "_line_total_base_currency",
+                "value": "350"
+              },
+              {
+                "id": 65096,
+                "key": "_line_tax_base_currency",
+                "value": "87.5"
+              }
+            ]
+          },
+          "7894": {
+            "id": 7894,
+            "order_id": 1813,
+            "name": "Liniment subscription",
+            "product_id": 293,
+            "variation_id": 0,
+            "quantity": 1,
+            "tax_class": "",
+            "subtotal": "80",
+            "subtotal_tax": "20",
+            "total": "80",
+            "total_tax": "20",
+            "taxes": {
+              "total": {
+                "26": "20"
+              },
+              "subtotal": {
+                "26": "20"
+              }
+            },
+            "meta_data": [
+              {
+                "id": 65103,
+                "key": "_line_subtotal_base_currency",
+                "value": "80"
+              },
+              {
+                "id": 65105,
+                "key": "_line_subtotal_tax_base_currency",
+                "value": "20"
+              },
+              {
+                "id": 65107,
+                "key": "_line_total_base_currency",
+                "value": "80"
+              },
+              {
+                "id": 65109,
+                "key": "_line_tax_base_currency",
+                "value": "20"
+              }
+            ]
+          },
+          "7903": {
+            "id": 7903,
+            "order_id": 1813,
+            "name": "T-Shirt",
+            "product_id": 15,
+            "variation_id": 0,
+            "quantity": 1,
+            "tax_class": "",
+            "subtotal": "135",
+            "subtotal_tax": "33.75",
+            "total": "135",
+            "total_tax": "33.75",
+            "taxes": {
+              "total": {
+                "26": "33.75"
+              },
+              "subtotal": {
+                "26": "33.75"
+              }
+            },
+            "meta_data": [
+              {
+                "id": 65177,
+                "key": "_line_subtotal_base_currency",
+                "value": "135"
+              },
+              {
+                "id": 65179,
+                "key": "_line_subtotal_tax_base_currency",
+                "value": "33.75"
+              },
+              {
+                "id": 65181,
+                "key": "_line_total_base_currency",
+                "value": "135"
+              },
+              {
+                "id": 65183,
+                "key": "_line_tax_base_currency",
+                "value": "33.75"
+              },
+              {
+                "id": 65186,
+                "key": "_ppu_upsell_id",
+                "value": "5ffffbb9-ec7f-470a-9d71-ad70fda1bb3a"
+              }
+            ]
+          }
+        },
+        "tax_lines": {
+          "7898": {
+            "id": 7898,
+            "order_id": 1813,
+            "name": "",
+            "rate_code": "SE-VAT SE-1",
+            "rate_id": 26,
+            "label": "VAT SE",
+            "compound": false,
+            "tax_total": "141.25",
+            "shipping_tax_total": "12.25",
+            "rate_percent": 25,
+            "meta_data": [
+              {
+                "id": 65135,
+                "key": "tax_amount_base_currency",
+                "value": "141.25"
+              },
+              {
+                "id": 65137,
+                "key": "shipping_tax_amount_base_currency",
+                "value": "12.25"
+              }
+            ]
+          }
+        },
+        "shipping_lines": {
+          "7899": {
+            "id": 7899,
+            "order_id": 1813,
+            "name": "Flat rate",
+            "method_title": "Flat rate",
+            "method_id": "flat_rate",
+            "instance_id": "3",
+            "total": "49.00",
+            "total_tax": "12.25",
+            "taxes": {
+              "total": {
+                "26": "12.25"
+              }
+            },
+            "tax_status": "taxable",
+            "meta_data": [
+              {
+                "id": 65145,
+                "key": "Items",
+                "value": "Hoodie &times; 1, Liniment subscription &times; 1"
+              }
+            ]
+          }
+        },
+        "fee_lines": [],
+        "coupon_lines": [],
+        "order_comments": [
+          {
+            "id": 698,
+            "date_created": {
+              "date": "2025-02-17 21:07:26.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "The customer added <i>T-Shirt</i> to the order through an upsell offer",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          },
+          {
+            "id": 697,
+            "date_created": {
+              "date": "2025-02-17 21:07:19.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "The Klarna order was successfully completed",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          },
+          {
+            "id": 696,
+            "date_created": {
+              "date": "2025-02-17 21:07:19.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Payment via Klarna Payments, order ID: d2c3c127-6e00-4b1f-8542-e20c3f378bc1",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          },
+          {
+            "id": 693,
+            "date_created": {
+              "date": "2025-02-17 21:07:19.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Order status changed from Pending payment to Processing.",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          },
+          {
+            "id": 692,
+            "date_created": {
+              "date": "2025-02-17 21:06:51.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Order status changed from Draft to Pending payment.",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          }
+        ]
+      },
+      "integration_order": {
+        "order_id": "d2c3c127-6e00-4b1f-8542-e20c3f378bc1",
+        "status": "AUTHORIZED",
+        "fraud_status": "ACCEPTED",
+        "order_amount": 76750,
+        "original_order_amount": 59875,
+        "captured_amount": 0,
+        "refunded_amount": 0,
+        "remaining_authorized_amount": 76750,
+        "purchase_currency": "SEK",
+        "locale": "en-SE",
+        "order_lines": [
+          {
+            "reference": "woo-hoodie",
+            "type": "physical",
+            "quantity": 1,
+            "quantity_unit": "pcs",
+            "name": "Hoodie",
+            "total_amount": 43750,
+            "unit_price": 43750,
+            "total_discount_amount": 0,
+            "tax_rate": 2500,
+            "total_tax_amount": 8750,
+            "product_url": "https://klarna-kp-demo.krokedil.site/product/hoodie/",
+            "image_url": "https://klarna-kp-demo.krokedil.site/wp-content/uploads/2023/11/hoodie-300x300.jpg"
+          },
+          {
+            "reference": "293",
+            "type": "physical",
+            "quantity": 1,
+            "quantity_unit": "pcs",
+            "name": "Liniment subscription",
+            "total_amount": 10000,
+            "unit_price": 10000,
+            "total_discount_amount": 0,
+            "tax_rate": 2500,
+            "total_tax_amount": 2000,
+            "product_url": "https://klarna-kp-demo.krokedil.site/product/liniment/",
+            "image_url": "https://klarna-kp-demo.krokedil.site/wp-content/uploads/2023/12/liniment-300x300.jpg",
+            "subscription": {
+              "name": "Liniment subscription",
+              "interval": "MONTH",
+              "interval_count": 1
+            }
+          },
+          {
+            "reference": "woo-t-shirt",
+            "type": "physical",
+            "quantity": 1,
+            "quantity_unit": "pcs",
+            "name": "T-Shirt",
+            "total_amount": 16875,
+            "unit_price": 16875,
+            "total_discount_amount": 0,
+            "tax_rate": 2500,
+            "total_tax_amount": 3375,
+            "product_url": "https://klarna-kp-demo.krokedil.site/product/t-shirt/",
+            "image_url": "https://klarna-kp-demo.krokedil.site/wp-content/uploads/2023/09/t-shirt-300x300.jpg"
+          },
+          {
+            "reference": "flat_rate:3",
+            "type": "shipping_fee",
+            "quantity": 1,
+            "quantity_unit": "pcs",
+            "name": "Flat rate",
+            "total_amount": 6125,
+            "unit_price": 6125,
+            "total_discount_amount": 0,
+            "tax_rate": 2500,
+            "total_tax_amount": 1225
+          }
+        ],
+        "merchant_reference1": "kp-1377-demo",
+        "merchant_reference2": "1813",
+        "klarna_reference": "L6H3P15G",
+        "billing_address": {
+          "given_name": "Jennifer",
+          "family_name": "Test-uaps",
+          "title": "",
+          "street_address": "Södra Blasieholmshamnen 2",
+          "street_address2": "fff",
+          "postal_code": "111 48",
+          "city": "Stockholm",
+          "region": "",
+          "country": "SE",
+          "email": "generated_email_de+1732801159500@example.com",
+          "phone": "+46701740615"
+        },
+        "shipping_address": {
+          "given_name": "Anna",
+          "family_name": "Larson",
+          "title": "",
+          "street_address": "Lilla Tvärgatan 8",
+          "street_address2": "Address Line 2",
+          "postal_code": "24162",
+          "city": "Löberöd",
+          "region": "",
+          "country": "SE",
+          "email": "checkout-se@testdrive.klarna.com",
+          "phone": "07200000001"
+        },
+        "created_at": "2025-02-17T21:07:19.370Z",
+        "purchase_country": "SE",
+        "expires_at": "2025-03-17T00:00:00.000Z",
+        "captures": [],
+        "refunds": [],
+        "initial_payment_method": {
+          "type": "INVOICE",
+          "description": "Pay later",
+          "number_of_installments": 1
+        },
+        "shipping_info": []
+      },
+      "logs": [
+        "2025-02-17T21:06:51+00:00 NOTICE {\"type\":\"POST\",\"title\":\"Create session\",\"arguments\":{\"country\":\"SE\",\"order_id\":1813,\"include_address\":true},\"request\":{\"headers\":{\"Authorization\":\"[REDACTED]\",\"Content-Type\":\"application/json\"},\"user-agent\":\"WordPress/6.7.2; https://klarna-kp-demo.krokedil.site - WooCommerce: 9.6.2 - KP: 3.9.2 - PHP Version: 8.3.8 - Krokedil\",\"method\":\"POST\",\"timeout\":10,\"body\":{\"purchase_country\":\"SE\",\"purchase_currency\":\"SEK\",\"locale\":\"en-US\",\"order_amount\":59875,\"order_tax_amount\":11975,\"order_lines\":[{\"image_url\":\"https://klarna-kp-demo.krokedil.site/wp-content/uploads/2023/11/hoodie-300x300.jpg\",\"name\":\"Hoodie\",\"product_url\":\"https://klarna-kp-demo.krokedil.site/product/hoodie/\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"woo-hoodie\",\"tax_rate\":2500,\"total_amount\":43750,\"total_discount_amount\":0,\"total_tax_amount\":8750,\"type\":\"physical\",\"unit_price\":43750},{\"image_url\":\"https://klarna-kp-demo.krokedil.site/wp-content/uploads/2023/12/liniment-300x300.jpg\",\"name\":\"Liniment subscription\",\"product_url\":\"https://klarna-kp-demo.krokedil.site/product/liniment/\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"293\",\"tax_rate\":2500,\"total_amount\":10000,\"total_discount_amount\":0,\"total_tax_amount\":2000,\"type\":\"physical\",\"unit_price\":10000,\"subscription\":{\"name\":\"Liniment subscription\",\"interval\":\"MONTH\",\"interval_count\":1}},{\"name\":\"Flat rate\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"flat_rate:3\",\"tax_rate\":2500,\"total_amount\":6125,\"total_discount_amount\":0,\"total_tax_amount\":1225,\"type\":\"shipping_fee\",\"unit_price\":6125}],\"customer\":{\"type\":\"person\"},\"billing_address\":{\"given_name\":\"Anna\",\"family_name\":\"Larson\",\"email\":\"checkout-se@testdrive.klarna.com\",\"phone\":\"07200000001\",\"street_address\":\"Lilla Tvu00e4rgatan 8\",\"street_address2\":\"Address Line 2\",\"postal_code\":\"24162\",\"city\":\"Lu00f6beru00f6d\",\"region\":\"\",\"country\":\"SE\"},\"shipping_address\":{\"given_name\":\"Anna\",\"family_name\":\"Larson\",\"email\":\"checkout-se@testdrive.klarna.com\",\"phone\":\"07200000001\",\"street_address\":\"Lilla Tvu00e4rgatan 8\",\"street_address2\":\"Address Line 2\",\"postal_code\":\"24162\",\"city\":\"Lu00f6beru00f6d\",\"region\":\"\",\"country\":\"SE\"},\"options\":null,\"merchant_urls\":{\"authorization\":\"https://klarna-kp-demo.krokedil.site/wc-api/KP_WC_AUTHORIZATION\"},\"intent\":\"buy_and_tokenize\"}},\"request_url\":\"https://api.playground.klarna.com/payments/v1/sessions\",\"response\":{\"body\":{\"client_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjgyMzA1ZWJjLWI4MTEtMzYzNy1hYTRjLTY2ZWNhMTg3NGYzZCJ9.eyJzZXNzaW9uX2lkIjoiMTZiZjQ5NTEtOWU5Yi02M2U0LWEwNDMtMWUzNzJiMDdiZTI2IiwiYmFzZV91cmwiOiJodHRwczovL2pzLnBsYXlncm91bmQua2xhcm5hLmNvbS9ldS9rcCIsImRlc2lnbiI6ImtsYXJuYSIsImxhbmd1YWdlIjoiZW4iLCJwdXJjaGFzZV9jb3VudHJ5IjoiU0UiLCJlbnZpcm9ubWVudCI6InBsYXlncm91bmQiLCJtZXJjaGFudF9uYW1lIjoiUGxheWdyb3VuZCBEZW1vIE1lcmNoYW50Iiwic2Vzc2lvbl90eXBlIjoiUEFZTUVOVFMiLCJjbGllbnRfZXZlbnRfYmFzZV91cmwiOiJodHRwczovL2V1LnBsYXlncm91bmQua2xhcm5hZXZ0LmNvbSIsInNjaGVtZSI6dHJ1ZSwiZXhwZXJpbWVudHMiOlt7Im5hbWUiOiJrcGMtcHNlbC00NDI5IiwidmFyaWF0ZSI6ImEifSx7Im5hbWUiOiJrcC1jbGllbnQtb25lLXB1cmNoYXNlLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3BjLTFrLXNlcnZpY2UiLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3AtY2xpZW50LXV0b3BpYS1zdGF0aWMtd2lkZ2V0IiwidmFyaWF0ZSI6ImluZGV4IiwicGFyYW1ldGVycyI6eyJkeW5hbWljIjoidHJ1ZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoiaW4tYXBwLXNkay1uZXctaW50ZXJuYWwtYnJvd3NlciIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6Im5ldy1pbnRlcm5hbC1icm93c2VyLWVuYWJsZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLXNkay1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImtwLWNsaWVudC11dG9waWEtd2Vidmlldy1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImluLWFwcC1zZGstY2FyZC1zY2FubmluZyIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6ImNhcmQtc2Nhbm5pbmctZW5hYmxlIn19XSwicmVnaW9uIjoiZXUiLCJvcmRlcl9hbW91bnQiOjU5ODc1LCJvZmZlcmluZ19vcHRzIjoyLCJvbyI6ImQyIiwidmVyc2lvbiI6InYxLjEwLjAtMTU5MC1nM2ViYzM5MDciLCJpIjoiYnQifQ.I9AZJvuLl2B-_8huYVxfkapctPaNyiLSbYKqYwkjF0gzJ6akVOKXBEdMJF1BgVUlK9kc4E-6zDO0NeH9E31F69m2EiWBm7D19w9QySRBZTpRfNmBhSLr-J6SjngNNzs-xM4tN8-u3_bfsBmu-84i7SkGwSt7N539aeqvJrvb0TSSHupRaM_Mwj4u_iqZu8VTvYAzreovVkpPmq5c3rJtGBm2tzUQ-o_W5vgu5smLPb9zcwAT7FoXsDPkjtp8S4IYbXvpZo5zrbrwQ-g7x13-xvBUzw2b4Ldf-PDqeiMEppKwgLqf4Hmp0ukmOSBqb0tLskx4XiROYgfu5JBfPtgkfQ\",\"payment_method_categories\":[{\"asset_urls\":{\"descriptive\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\",\"standard\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\"},\"identifier\":\"pay_over_time\",\"name\":\"Monthly financing\"},{\"asset_urls\":{\"descriptive\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\",\"standard\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\"},\"identifier\":\"pay_later\",\"name\":\"Buy now, pay later\"},{\"asset_urls\":{\"descriptive\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\",\"standard\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\"},\"identifier\":\"pay_now\",\"name\":\"Pay now\"}],\"session_id\":\"16bf4951-9e9b-63e4-a043-1e372b07be26\"},\"code\":200},\"timestamp\":\"2025-02-17 21:06:51\",\"stack\":[{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/klarna-payments-for-woocommerce/classes/class-wc-gateway-klarna-payments.php\",\"line\":438,\"function\":\"KP_Session->get_session()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/klarna-payments-for-woocommerce/classes/class-wc-gateway-klarna-payments.php\",\"line\":345,\"function\":\"WC_Gateway_Klarna_Payments->process_blocks_order()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Legacy.php\",\"line\":54,\"function\":\"WC_Gateway_Klarna_Payments->process_payment()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Legacy->process_legacy_payment()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":565,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Utilities/CheckoutTrait.php\",\"line\":83,\"function\":\"do_action_ref_array()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php\",\"line\":374,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->process_payment()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AbstractRoute.php\",\"line\":119,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->get_route_post_response()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php\",\"line\":136,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\AbstractRoute->get_response_by_request_method()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":1292,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->get_response()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":1125,\"function\":\"WP_REST_Server->respond_to_request()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":439,\"function\":\"WP_REST_Server->dispatch()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/rest-api.php\",\"line\":449,\"function\":\"WP_REST_Server->serve_request()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"rest_api_loaded()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":565,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp.php\",\"line\":418,\"function\":\"do_action_ref_array()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp.php\",\"line\":813,\"function\":\"WP->parse_request()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/functions.php\",\"line\":1336,\"function\":\"WP->main()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-blog-header.php\",\"line\":16,\"function\":\"wp()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/index.php\",\"line\":17,\"function\":\"require()\"}],\"plugin_version\":\"3.9.2\"} CONTEXT: {\"_legacy\":true}",
+        "2025-02-17T21:06:51+00:00 NOTICE {\"type\":\"POST\",\"title\":\"Create HPP\",\"arguments\":{\"country\":\"SE\",\"session_id\":\"16bf4951-9e9b-63e4-a043-1e372b07be26\",\"order_id\":1813},\"request\":{\"headers\":{\"Authorization\":\"[REDACTED]\",\"Content-Type\":\"application/json\"},\"user-agent\":\"WordPress/6.7.2; https://klarna-kp-demo.krokedil.site - WooCommerce: 9.6.2 - KP: 3.9.2 - PHP Version: 8.3.8 - Krokedil\",\"method\":\"POST\",\"timeout\":10,\"body\":{\"payment_session_url\":\"https://api.playground.klarna.com/payments/v1/sessions/16bf4951-9e9b-63e4-a043-1e372b07be26\",\"merchant_urls\":{\"success\":\"https://klarna-kp-demo.krokedil.site/checkout/order-received/1813/?key=wc_order_a1pzI23QXZ7vc&sid={{session_id}}&authorization_token={{authorization_token}}\",\"cancel\":\"https://klarna-kp-demo.krokedil.site/checkout/\",\"back\":\"https://klarna-kp-demo.krokedil.site/checkout/\",\"failure\":\"https://klarna-kp-demo.krokedil.site/checkout/\",\"error\":\"https://klarna-kp-demo.krokedil.site/checkout/\"}}},\"request_url\":\"https://api.playground.klarna.com/hpp/v1/sessions\",\"response\":{\"body\":{\"session_id\":\"6e2ab9ef-9f30-15d9-b3ad-1ef86c50ae46\",\"redirect_url\":\"https://pay.playground.kustom.co/hpp/payments/1dwsNLf\",\"session_url\":\"https://api.playground.kustom.co/hpp/v1/sessions/6e2ab9ef-9f30-15d9-b3ad-1ef86c50ae46\",\"qr_code_url\":\"https://pay.playground.kustom.co/hpp/payments/6e2ab9ef-9f30-15d9-b3ad-1ef86c50ae46/qr\",\"distribution_url\":\"https://api.playground.kustom.co/hpp/v1/sessions/6e2ab9ef-9f30-15d9-b3ad-1ef86c50ae46/distribution\",\"expires_at\":\"2025-02-19T20:36:51.246Z\",\"distribution_module\":{\"token\":\"eyJhbGciOiJub25lIn0.eyJzZXNzaW9uX2lkIjoiNjU1NjVkMWEtYTIyZC0xZWExLTgyYmYtMWU0MDIzNzg1YTA4IiwiaWZyYW1lX3VybCI6Imh0dHBzOi8vcGF5LnBsYXlncm91bmQua3VzdG9tLmNvL2hwcC9kaXN0cmlidXRpb25zLzY1NTY1ZDFhLWEyMmQtMWVhMS04MmJmLTFlNDAyMzc4NWEwOD9wcm9maWxlX2lkPXt7cHJvZmlsZV9pZH19XHUwMDI2dmlld19pZD17e3ZpZXdfaWR9fSIsImlmcmFtZV9vcmlnaW4iOiJodHRwczovL3BheS5wbGF5Z3JvdW5kLmt1c3RvbS5jbyIsImV2ZW50X3VybCI6Imh0dHBzOi8vZXUucGxheWdyb3VuZC5rbGFybmFldnQuY29tIn0.\",\"standalone_url\":\"https://pay.playground.kustom.co/hpp/distributions/65565d1a-a22d-1ea1-82bf-1e4023785a08?profile_id={{profile_id}}&view_id={{view_id}}\",\"generation_url\":\"https://api.playground.kustom.co/hpp/v1/sessions/6e2ab9ef-9f30-15d9-b3ad-1ef86c50ae46/distribution-module/token\"}},\"code\":201},\"timestamp\":\"2025-02-17 21:06:51\",\"stack\":[{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/klarna-payments-for-woocommerce/classes/class-wc-gateway-klarna-payments.php\",\"line\":345,\"function\":\"WC_Gateway_Klarna_Payments->process_blocks_order()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Legacy.php\",\"line\":54,\"function\":\"WC_Gateway_Klarna_Payments->process_payment()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Legacy->process_legacy_payment()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":565,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Utilities/CheckoutTrait.php\",\"line\":83,\"function\":\"do_action_ref_array()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php\",\"line\":374,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->process_payment()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AbstractRoute.php\",\"line\":119,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->get_route_post_response()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php\",\"line\":136,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\AbstractRoute->get_response_by_request_method()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":1292,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->get_response()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":1125,\"function\":\"WP_REST_Server->respond_to_request()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":439,\"function\":\"WP_REST_Server->dispatch()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/rest-api.php\",\"line\":449,\"function\":\"WP_REST_Server->serve_request()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"rest_api_loaded()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":565,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp.php\",\"line\":418,\"function\":\"do_action_ref_array()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp.php\",\"line\":813,\"function\":\"WP->parse_request()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/functions.php\",\"line\":1336,\"function\":\"WP->main()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-blog-header.php\",\"line\":16,\"function\":\"wp()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/index.php\",\"line\":17,\"function\":\"require()\"}],\"plugin_version\":\"3.9.2\"} CONTEXT: {\"_legacy\":true}",
+        "2025-02-17T21:07:19+00:00 NOTICE {\"type\":\"POST\",\"title\":\"Place order\",\"arguments\":{\"country\":\"SE\",\"auth_token\":\"2bb1fe9c-5d4f-64a4-a08e-c68f6c3db942\",\"order_id\":\"1813\",\"session_id\":\"16bf4951-9e9b-63e4-a043-1e372b07be26\"},\"request\":{\"headers\":{\"Authorization\":\"[REDACTED]\",\"Content-Type\":\"application/json\"},\"user-agent\":\"WordPress/6.7.2; https://klarna-kp-demo.krokedil.site - WooCommerce: 9.6.2 - KP: 3.9.2 - PHP Version: 8.3.8 - Krokedil\",\"method\":\"POST\",\"timeout\":10,\"body\":{\"purchase_country\":\"SE\",\"purchase_currency\":\"SEK\",\"locale\":\"en-US\",\"order_amount\":59875,\"order_tax_amount\":11975,\"order_lines\":[{\"image_url\":\"https://klarna-kp-demo.krokedil.site/wp-content/uploads/2023/11/hoodie-300x300.jpg\",\"name\":\"Hoodie\",\"product_url\":\"https://klarna-kp-demo.krokedil.site/product/hoodie/\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"woo-hoodie\",\"tax_rate\":2500,\"total_amount\":43750,\"total_discount_amount\":0,\"total_tax_amount\":8750,\"type\":\"physical\",\"unit_price\":43750},{\"image_url\":\"https://klarna-kp-demo.krokedil.site/wp-content/uploads/2023/12/liniment-300x300.jpg\",\"name\":\"Liniment subscription\",\"product_url\":\"https://klarna-kp-demo.krokedil.site/product/liniment/\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"293\",\"tax_rate\":2500,\"total_amount\":10000,\"total_discount_amount\":0,\"total_tax_amount\":2000,\"type\":\"physical\",\"unit_price\":10000,\"subscription\":{\"name\":\"Liniment subscription\",\"interval\":\"MONTH\",\"interval_count\":1}},{\"name\":\"Flat rate\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"flat_rate:3\",\"tax_rate\":2500,\"total_amount\":6125,\"total_discount_amount\":0,\"total_tax_amount\":1225,\"type\":\"shipping_fee\",\"unit_price\":6125}],\"customer\":{\"type\":\"person\"},\"billing_address\":{\"given_name\":\"Anna\",\"family_name\":\"Larson\",\"email\":\"checkout-se@testdrive.klarna.com\",\"phone\":\"07200000001\",\"street_address\":\"Lilla Tvu00e4rgatan 8\",\"street_address2\":\"Address Line 2\",\"postal_code\":\"24162\",\"city\":\"Lu00f6beru00f6d\",\"region\":\"\",\"country\":\"SE\"},\"shipping_address\":{\"given_name\":\"Anna\",\"family_name\":\"Larson\",\"email\":\"checkout-se@testdrive.klarna.com\",\"phone\":\"07200000001\",\"street_address\":\"Lilla Tvu00e4rgatan 8\",\"street_address2\":\"Address Line 2\",\"postal_code\":\"24162\",\"city\":\"Lu00f6beru00f6d\",\"region\":\"\",\"country\":\"SE\"},\"options\":null,\"merchant_urls\":{\"authorization\":\"https://klarna-kp-demo.krokedil.site/wc-api/KP_WC_AUTHORIZATION\",\"confirmation\":\"https://klarna-kp-demo.krokedil.site/checkout/order-received/1813/?key=wc_order_a1pzI23QXZ7vc\"},\"merchant_reference1\":\"kp-1377-demo\",\"merchant_reference2\":1813,\"intent\":\"buy\"}},\"request_url\":\"https://api.playground.klarna.com/payments/v1/authorizations/2bb1fe9c-5d4f-64a4-a08e-c68f6c3db942/order\",\"response\":{\"body\":{\"authorized_payment_method\":{\"type\":\"invoice\"},\"fraud_status\":\"ACCEPTED\",\"order_id\":\"d2c3c127-6e00-4b1f-8542-e20c3f378bc1\",\"redirect_url\":\"https://js.playground.klarna.com/eu/kp/v1/sessions/16bf4951-9e9b-63e4-a043-1e372b07be26/redirect\"},\"code\":200},\"timestamp\":\"2025-02-17 21:07:19\",\"stack\":[{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"KP_Callbacks->process_hpp_redirect()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":517,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-settings.php\",\"line\":704,\"function\":\"do_action()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-config.php\",\"line\":106,\"function\":\"require_once()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-load.php\",\"line\":50,\"function\":\"require_once()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/wp-blog-header.php\",\"line\":13,\"function\":\"require_once()\"},{\"file\":\"/home/dozexegike3940/web/klarna-kp-demo.krokedil.site/public_html/index.php\",\"line\":17,\"function\":\"require()\"}],\"plugin_version\":\"3.9.2\"} CONTEXT: {\"_legacy\":true}"
+      ]
+    }
+  },
+  "system_report": {
+    "environment": {
+      "home_url": "https://kp-export-order.krokedil.site",
+      "site_url": "https://kp-export-order.krokedil.site",
+      "store_id": "1587dffc-ceed-4a03-b5b0-b2074ea5a120",
+      "version": "9.6.2",
+      "log_directory": "/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/uploads/wc-logs/",
+      "log_directory_writable": true,
+      "wp_version": "6.7.2",
+      "wp_multisite": false,
+      "wp_memory_limit": 268435456,
+      "wp_debug_mode": false,
+      "wp_cron": true,
+      "language": "en_US",
+      "external_object_cache": null,
+      "server_info": "Apache/2.4.62 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1f",
+      "php_version": "8.3.16",
+      "php_post_max_size": 67108864,
+      "php_max_execution_time": 30,
+      "php_max_input_vars": 1000,
+      "curl_version": "7.68.0, OpenSSL/1.1.1f",
+      "suhosin_installed": false,
+      "max_upload_size": 67108864,
+      "mysql_version": "10.11.10",
+      "mysql_version_string": "10.11.10-MariaDB-ubu2004",
+      "default_timezone": "UTC",
+      "fsockopen_or_curl_enabled": true,
+      "soapclient_enabled": true,
+      "domdocument_enabled": true,
+      "gzip_enabled": true,
+      "mbstring_enabled": true,
+      "remote_post_successful": true,
+      "remote_post_response": "200",
+      "remote_get_successful": true,
+      "remote_get_response": "200"
+    },
+    "database": {
+      "wc_database_version": "9.6.2",
+      "database_prefix": "iwp7216_",
+      "maxmind_geoip_database": "",
+      "database_tables": {
+        "woocommerce": {
+          "iwp7216_woocommerce_sessions": {
+            "data": "0.27",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_api_keys": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_attribute_taxonomies": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_downloadable_product_permissions": {
+            "data": "0.02",
+            "index": "0.06",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_order_items": {
+            "data": "0.05",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_order_itemmeta": {
+            "data": "0.25",
+            "index": "0.22",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_tax_rates": {
+            "data": "0.02",
+            "index": "0.06",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_tax_rate_locations": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_shipping_zones": {
+            "data": "0.02",
+            "index": "0.00",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_shipping_zone_locations": {
+            "data": "0.02",
+            "index": "0.05",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_shipping_zone_methods": {
+            "data": "0.02",
+            "index": "0.00",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_payment_tokens": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_payment_tokenmeta": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_woocommerce_log": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          }
+        },
+        "other": {
+          "iwp7216_actionscheduler_actions": {
+            "data": "0.13",
+            "index": "0.11",
+            "engine": "InnoDB"
+          },
+          "iwp7216_actionscheduler_claims": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_actionscheduler_groups": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_actionscheduler_logs": {
+            "data": "0.09",
+            "index": "0.09",
+            "engine": "InnoDB"
+          },
+          "iwp7216_aelia_dismissed_messages": {
+            "data": "0.02",
+            "index": "0.00",
+            "engine": "InnoDB"
+          },
+          "iwp7216_commentmeta": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_comments": {
+            "data": "0.11",
+            "index": "0.09",
+            "engine": "InnoDB"
+          },
+          "iwp7216_iwp_backup_status": {
+            "data": "0.02",
+            "index": "0.00",
+            "engine": "InnoDB"
+          },
+          "iwp7216_iwp_processed_iterator": {
+            "data": "0.02",
+            "index": "0.00",
+            "engine": "InnoDB"
+          },
+          "iwp7216_links": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_options": {
+            "data": "4.42",
+            "index": "0.11",
+            "engine": "InnoDB"
+          },
+          "iwp7216_postmeta": {
+            "data": "1.52",
+            "index": "0.50",
+            "engine": "InnoDB"
+          },
+          "iwp7216_posts": {
+            "data": "0.27",
+            "index": "0.09",
+            "engine": "InnoDB"
+          },
+          "iwp7216_simple_history": {
+            "data": "0.05",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_simple_history_contexts": {
+            "data": "0.17",
+            "index": "0.14",
+            "engine": "InnoDB"
+          },
+          "iwp7216_snippets": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_termmeta": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_terms": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_term_relationships": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_term_taxonomy": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_usermeta": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_users": {
+            "data": "0.02",
+            "index": "0.05",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_admin_notes": {
+            "data": "0.08",
+            "index": "0.00",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_admin_note_actions": {
+            "data": "0.05",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_category_lookup": {
+            "data": "0.02",
+            "index": "0.00",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_customer_lookup": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_download_log": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_orders": {
+            "data": "0.02",
+            "index": "0.11",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_orders_meta": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_order_addresses": {
+            "data": "0.02",
+            "index": "0.06",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_order_coupon_lookup": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_order_operational_data": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_order_product_lookup": {
+            "data": "0.05",
+            "index": "0.06",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_order_stats": {
+            "data": "0.02",
+            "index": "0.05",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_order_tax_lookup": {
+            "data": "0.02",
+            "index": "0.03",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_product_attributes_lookup": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_product_download_directories": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_product_meta_lookup": {
+            "data": "0.02",
+            "index": "0.11",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_rate_limits": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_reserved_stock": {
+            "data": "0.02",
+            "index": "0.00",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_tax_rate_classes": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          },
+          "iwp7216_wc_webhooks": {
+            "data": "0.02",
+            "index": "0.02",
+            "engine": "InnoDB"
+          }
+        }
+      },
+      "database_size": {
+        "data": 8.349999999999984,
+        "index": 2.74
+      }
+    },
+    "active_plugins": [
+      {
+        "plugin": "code-snippets/code-snippets.php",
+        "name": "Code Snippets",
+        "version": "3.6.8",
+        "version_latest": "3.6.8",
+        "url": "https://codesnippets.pro",
+        "author_name": "Code Snippets Pro",
+        "author_url": "https://codesnippets.pro",
+        "network_activated": false
+      },
+      {
+        "plugin": "iwp-client/init.php",
+        "name": "InfiniteWP - Client",
+        "version": "1.13.2",
+        "version_latest": "1.13.2",
+        "url": "http://infinitewp.com/",
+        "author_name": "Revmakx",
+        "author_url": "http://www.revmakx.com",
+        "network_activated": true
+      },
+      {
+        "plugin": "klarna-order-management-for-woocommerce/klarna-order-management-for-woocommerce.php",
+        "name": "Klarna Order Management for WooCommerce",
+        "version": "1.9.5",
+        "version_latest": "1.9.5",
+        "url": "https://krokedil.se/klarna/",
+        "author_name": "klarna, krokedil",
+        "author_url": "https://krokedil.se/",
+        "network_activated": false
+      },
+      {
+        "plugin": "klarna-payments-for-woocommerce/klarna-payments-for-woocommerce.php",
+        "name": "Klarna for WooCommerce",
+        "version": "4.0.0",
+        "version_latest": "4.0.0",
+        "url": "https://krokedil.com/klarna-payments/",
+        "author_name": "klarna",
+        "author_url": "https://www.klarna.com/",
+        "network_activated": false
+      },
+      {
+        "plugin": "krokedil-github-readme-master/krokedil-github-readme.php",
+        "name": "Krokedil Github Readme",
+        "version": "2.0.1",
+        "version_latest": "2.0.1",
+        "url": "",
+        "author_name": "Krokedil",
+        "author_url": "https://krokedil.se/",
+        "network_activated": false
+      },
+      {
+        "plugin": "post-purchase-upsell-for-woocommerce/post-purchase-upsell-for-woocommerce.php",
+        "name": "Post Purchase Upsell for WooCommerce",
+        "version": "3.1.0",
+        "version_latest": "3.1.0",
+        "url": "https://krokedil.com/",
+        "author_name": "Krokedil",
+        "author_url": "https://krokedil.com/",
+        "network_activated": false
+      },
+      {
+        "plugin": "simple-history/index.php",
+        "name": "Simple History",
+        "version": "5.6.1",
+        "version_latest": "5.6.1",
+        "url": "https://simple-history.com",
+        "author_name": "Pär Thernström",
+        "author_url": "https://simple-history.com/",
+        "network_activated": false
+      },
+      {
+        "plugin": "wc-aelia-foundation-classes/wc-aelia-foundation-classes.php",
+        "name": "Aelia Foundation Classes for WooCommerce",
+        "version": "2.6.3.250103",
+        "version_latest": "2.6.3.250103",
+        "url": "https://aelia.co/shop/product-category/woocommerce/",
+        "author_name": "Aelia",
+        "author_url": "https://aelia.co",
+        "network_activated": false
+      },
+      {
+        "plugin": "whats-my-kp/whats-my-kp.php",
+        "name": "Whats my KP?",
+        "version": "1.0.0",
+        "version_latest": "1.0.0",
+        "url": "https://krokedil.com/",
+        "author_name": "krokedil",
+        "author_url": "https://krokedil.com/",
+        "network_activated": false
+      },
+      {
+        "plugin": "woo-update-manager/woo-update-manager.php",
+        "name": "WooCommerce.com Update Manager",
+        "version": "1.0.3",
+        "version_latest": "1.0.3",
+        "url": "",
+        "author_name": "Automattic",
+        "author_url": "https://woocommerce.com/",
+        "network_activated": false
+      },
+      {
+        "plugin": "woocommerce-aelia-currencyswitcher/woocommerce-aelia-currencyswitcher.php",
+        "name": "Aelia Currency Switcher for WooCommerce",
+        "version": "5.0.7.230718",
+        "version_latest": "5.0.7.230718",
+        "url": "https://aelia.co/shop/currency-switcher-woocommerce/",
+        "author_name": "Aelia",
+        "author_url": "https://aelia.co",
+        "network_activated": false
+      },
+      {
+        "plugin": "woocommerce-sequential-order-numbers-pro/woocommerce-sequential-order-numbers-pro.php",
+        "name": "WooCommerce Sequential Order Numbers Pro",
+        "version": "1.21.4",
+        "version_latest": "1.21.4",
+        "url": "http://www.woocommerce.com/products/sequential-order-numbers-pro/",
+        "author_name": "SkyVerge",
+        "author_url": "http://www.woocommerce.com",
+        "network_activated": false
+      },
+      {
+        "plugin": "woocommerce-subscriptions/woocommerce-subscriptions.php",
+        "name": "WooCommerce Subscriptions",
+        "version": "7.2.1",
+        "version_latest": "7.2.1",
+        "url": "https://www.woocommerce.com/products/woocommerce-subscriptions/",
+        "author_name": "WooCommerce",
+        "author_url": "https://woocommerce.com/",
+        "network_activated": false
+      },
+      {
+        "plugin": "woocommerce/woocommerce.php",
+        "name": "WooCommerce",
+        "version": "9.6.2",
+        "version_latest": "9.6.2",
+        "url": "https://woocommerce.com/",
+        "author_name": "Automattic",
+        "author_url": "https://woocommerce.com",
+        "network_activated": false
+      }
+    ],
+    "inactive_plugins": [],
+    "dropins_mu_plugins": {
+      "dropins": [],
+      "mu_plugins": [
+        {
+          "plugin": "mu-iwp-client.php",
+          "name": "InfiniteWP - Client Loader",
+          "version": "1.0.1",
+          "url": "https://infinitewp.com/",
+          "author_name": "Revmakx",
+          "author_url": "https://infinitewp.com/"
+        }
+      ]
+    },
+    "theme": {
+      "name": "Astra",
+      "version": "4.8.12",
+      "version_latest": "4.8.12",
+      "author_url": "https://wpastra.com/about/?utm_source=theme_preview&#038;utm_medium=author_link&#038;utm_campaign=astra_theme",
+      "is_child_theme": false,
+      "is_block_theme": false,
+      "has_woocommerce_support": true,
+      "has_woocommerce_file": false,
+      "has_outdated_templates": false,
+      "overrides": [],
+      "parent_name": "",
+      "parent_version": "",
+      "parent_version_latest": "",
+      "parent_author_url": ""
+    },
+    "settings": {
+      "api_enabled": false,
+      "force_ssl": false,
+      "currency": "SEK",
+      "currency_symbol": "kr",
+      "currency_position": "right_space",
+      "thousand_separator": ",",
+      "decimal_separator": ".",
+      "number_of_decimals": 2,
+      "geolocation_enabled": false,
+      "taxonomies": {
+        "external": "external",
+        "grouped": "grouped",
+        "simple": "simple",
+        "subscription": "subscription",
+        "variable": "variable",
+        "variable-subscription": "variable subscription"
+      },
+      "product_visibility_terms": {
+        "exclude-from-catalog": "exclude-from-catalog",
+        "exclude-from-search": "exclude-from-search",
+        "featured": "featured",
+        "outofstock": "outofstock",
+        "rated-1": "rated-1",
+        "rated-2": "rated-2",
+        "rated-3": "rated-3",
+        "rated-4": "rated-4",
+        "rated-5": "rated-5"
+      },
+      "woocommerce_com_connected": "no",
+      "enforce_approved_download_dirs": true,
+      "order_datastore": "WC_Order_Data_Store_CPT",
+      "HPOS_enabled": false,
+      "HPOS_sync_enabled": false
+    },
+    "security": {
+      "secure_connection": true,
+      "hide_errors": true
+    },
+    "pages": [
+      {
+        "page_name": "Shop base",
+        "page_id": "6",
+        "page_set": true,
+        "page_exists": true,
+        "page_visible": true,
+        "shortcode": "",
+        "block": "",
+        "shortcode_required": false,
+        "shortcode_present": false,
+        "block_present": false,
+        "block_required": false
+      },
+      {
+        "page_name": "Cart",
+        "page_id": "7",
+        "page_set": true,
+        "page_exists": true,
+        "page_visible": true,
+        "shortcode": "[woocommerce_cart]",
+        "block": "woocommerce/cart",
+        "shortcode_required": true,
+        "shortcode_present": true,
+        "block_present": false,
+        "block_required": true
+      },
+      {
+        "page_name": "Checkout",
+        "page_id": "8",
+        "page_set": true,
+        "page_exists": true,
+        "page_visible": true,
+        "shortcode": "[woocommerce_checkout]",
+        "block": "woocommerce/checkout",
+        "shortcode_required": true,
+        "shortcode_present": false,
+        "block_present": true,
+        "block_required": true
+      },
+      {
+        "page_name": "My account",
+        "page_id": "9",
+        "page_set": true,
+        "page_exists": true,
+        "page_visible": true,
+        "shortcode": "[woocommerce_my_account]",
+        "block": "",
+        "shortcode_required": true,
+        "shortcode_present": true,
+        "block_present": false,
+        "block_required": false
+      },
+      {
+        "page_name": "Terms and conditions",
+        "page_id": "3",
+        "page_set": true,
+        "page_exists": true,
+        "page_visible": true,
+        "shortcode": "",
+        "block": "",
+        "shortcode_required": false,
+        "shortcode_present": false,
+        "block_present": false,
+        "block_required": false
+      }
+    ],
+    "post_type_counts": [
+      {
+        "type": "attachment",
+        "count": "46"
+      },
+      {
+        "type": "custom_css",
+        "count": "1"
+      },
+      {
+        "type": "iwp_log",
+        "count": "168"
+      },
+      {
+        "type": "nav_menu_item",
+        "count": "3"
+      },
+      {
+        "type": "page",
+        "count": "8"
+      },
+      {
+        "type": "post",
+        "count": "2"
+      },
+      {
+        "type": "ppu-upsell",
+        "count": "4"
+      },
+      {
+        "type": "product",
+        "count": "21"
+      },
+      {
+        "type": "product_variation",
+        "count": "2"
+      },
+      {
+        "type": "revision",
+        "count": "70"
+      },
+      {
+        "type": "shop_coupon",
+        "count": "1"
+      },
+      {
+        "type": "shop_order",
+        "count": "109"
+      },
+      {
+        "type": "shop_order_refund",
+        "count": "1"
+      },
+      {
+        "type": "shop_subscription",
+        "count": "3"
+      },
+      {
+        "type": "wp_global_styles",
+        "count": "2"
+      },
+      {
+        "type": "wp_navigation",
+        "count": "1"
+      },
+      {
+        "type": "wp_template",
+        "count": "2"
+      }
+    ],
+    "logging": {
+      "logging_enabled": true,
+      "default_handler": "Automattic\\WooCommerce\\Internal\\Admin\\Logging\\LogHandlerFileV2",
+      "retention_period_days": 30,
+      "level_threshold": "",
+      "log_directory_size": "16 MB"
+    },
+    "wc_sequential_order_numbers_pro": {
+      "is_payment_gateway": false,
+      "lifecycle_events": [
+        {
+          "name": "upgrade",
+          "time": 1739528155,
+          "version": "1.21.4",
+          "data": {
+            "from_version": "1.21.3"
+          }
+        },
+        {
+          "name": "upgrade",
+          "time": 1722849838,
+          "version": "1.21.3",
+          "data": {
+            "from_version": "1.21.2"
+          }
+        },
+        {
+          "name": "upgrade",
+          "time": 1717077279,
+          "version": "1.21.2",
+          "data": {
+            "from_version": "1.20.3"
+          }
+        },
+        {
+          "name": "install",
+          "time": 1701431650,
+          "version": "1.20.3"
+        }
+      ]
+    },
+    "subscriptions": {
+      "wcs_debug": false,
+      "mode": "staging",
+      "live_url": "https://klarna-kp-demo.krokedil.site",
+      "statuses": {
+        "wc-active": "1",
+        "wc-on-hold": "2"
+      },
+      "report_cache_enabled": true,
+      "cache_update_failures": 0,
+      "subscriptions_by_payment_gateway": {
+        "klarna_payments": {
+          "wc-active": "1",
+          "wc-on-hold": "2"
+        }
+      },
+      "payment_gateway_feature_support": {
+        "klarna_payments": [
+          "products",
+          "subscriptions",
+          "subscription_cancellation",
+          "subscription_suspension",
+          "subscription_reactivation",
+          "subscription_amount_changes",
+          "subscription_date_changes",
+          "subscription_payment_method_change",
+          "subscription_payment_method_change_customer",
+          "subscription_payment_method_change_admin",
+          "multiple_subscriptions",
+          "upsell",
+          "refunds",
+          "pay_button"
+        ]
+      }
+    }
+  }
+}

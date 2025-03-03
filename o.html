@@ -78,29 +78,475 @@
             background: #d63638;
         }
     </style>
-</head>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
 
-<body>
-    <div class="container">
+        //dom content loaded
+        const order = {
+        "id": 1813,
+        "parent_id": 0,
+        "status": "processing",
+        "currency": "SEK",
+        "version": "9.6.2",
+        "prices_include_tax": false,
+        "date_created": {
+          "date": "2025-02-17 21:06:51.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "date_modified": {
+          "date": "2025-02-17 21:07:19.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "discount_total": "0",
+        "discount_tax": "0",
+        "shipping_total": "49",
+        "shipping_tax": "12.25",
+        "cart_tax": "141.25",
+        "total": "767.50",
+        "total_tax": "153.5",
+        "customer_id": 1,
+        "order_key": "wc_order_a1pzI23QXZ7vc",
+        "billing": {
+          "first_name": "Anna",
+          "last_name": "Larson",
+          "company": "",
+          "address_1": "Lilla Tvärgatan 8",
+          "address_2": "Address Line 2",
+          "city": "Löberöd",
+          "state": "",
+          "postcode": "241 62",
+          "country": "SE",
+          "email": "checkout-se@testdrive.klarna.com",
+          "phone": "07200000001"
+        },
+        "shipping": {
+          "first_name": "Anna",
+          "last_name": "Larson",
+          "company": "",
+          "address_1": "Lilla Tvärgatan 8",
+          "address_2": "Address Line 2",
+          "city": "Löberöd",
+          "state": "",
+          "postcode": "241 62",
+          "country": "SE",
+          "phone": "07200000001"
+        },
+        "payment_method": "klarna_payments",
+        "payment_method_title": "Klarna",
+        "transaction_id": "d2c3c127-6e00-4b1f-8542-e20c3f378bc1",
+        "customer_ip_address": "81.234.27.236",
+        "customer_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+        "created_via": "store-api",
+        "customer_note": "",
+        "date_completed": null,
+        "date_paid": {
+          "date": "2025-02-17 21:07:19.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "cart_hash": "fa152f3f790d02b3a2aea3e54cee062e",
+        "order_stock_reduced": true,
+        "download_permissions_granted": true,
+        "new_order_email_sent": false,
+        "recorded_sales": true,
+        "recorded_coupon_usage_counts": true,
+        "number": "kp-1377-demo",
+        "meta_data": [
+          {
+            "id": 61470,
+            "key": "_shipping_hash",
+            "value": "9d4568c009d203ab10e33ea9953a0264"
+          },
+          {
+            "id": 61471,
+            "key": "_coupons_hash",
+            "value": "d751713988987e9331980363e24189ce"
+          },
+          {
+            "id": 61472,
+            "key": "_fees_hash",
+            "value": "d751713988987e9331980363e24189ce"
+          },
+          {
+            "id": 61473,
+            "key": "_taxes_hash",
+            "value": "2d79212761aa06c1b4b65264af1fb4ed"
+          },
+          {
+            "id": 61474,
+            "key": "is_vat_exempt",
+            "value": "no"
+          },
+          {
+            "id": 61475,
+            "key": "_order_total_base_currency",
+            "value": "767.50"
+          },
+          {
+            "id": 61476,
+            "key": "_cart_discount_base_currency",
+            "value": "0"
+          },
+          {
+            "id": 61477,
+            "key": "_order_shipping_base_currency",
+            "value": "49"
+          },
+          {
+            "id": 61478,
+            "key": "_order_tax_base_currency",
+            "value": "141.25"
+          },
+          {
+            "id": 61479,
+            "key": "_order_shipping_tax_base_currency",
+            "value": "12.25"
+          },
+          {
+            "id": 61480,
+            "key": "_cart_discount_tax_base_currency",
+            "value": "0"
+          },
+          {
+            "id": 61481,
+            "key": "_base_currency_exchange_rate",
+            "value": "1"
+          },
+          {
+            "id": 61588,
+            "key": "_order_number",
+            "value": "1377"
+          },
+          {
+            "id": 61589,
+            "key": "_order_number_formatted",
+            "value": "kp-1377-demo"
+          },
+          {
+            "id": 61590,
+            "key": "_order_number_meta",
+            "value": "1377"
+          },
+          {
+            "id": 61591,
+            "key": "_kp_session_data",
+            "value": "{\"klarna_session\":{\"client_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjgyMzA1ZWJjLWI4MTEtMzYzNy1hYTRjLTY2ZWNhMTg3NGYzZCJ9.eyJzZXNzaW9uX2lkIjoiMTZiZjQ5NTEtOWU5Yi02M2U0LWEwNDMtMWUzNzJiMDdiZTI2IiwiYmFzZV91cmwiOiJodHRwczovL2pzLnBsYXlncm91bmQua2xhcm5hLmNvbS9ldS9rcCIsImRlc2lnbiI6ImtsYXJuYSIsImxhbmd1YWdlIjoiZW4iLCJwdXJjaGFzZV9jb3VudHJ5IjoiU0UiLCJlbnZpcm9ubWVudCI6InBsYXlncm91bmQiLCJtZXJjaGFudF9uYW1lIjoiUGxheWdyb3VuZCBEZW1vIE1lcmNoYW50Iiwic2Vzc2lvbl90eXBlIjoiUEFZTUVOVFMiLCJjbGllbnRfZXZlbnRfYmFzZV91cmwiOiJodHRwczovL2V1LnBsYXlncm91bmQua2xhcm5hZXZ0LmNvbSIsInNjaGVtZSI6dHJ1ZSwiZXhwZXJpbWVudHMiOlt7Im5hbWUiOiJrcGMtcHNlbC00NDI5IiwidmFyaWF0ZSI6ImEifSx7Im5hbWUiOiJrcC1jbGllbnQtb25lLXB1cmNoYXNlLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3BjLTFrLXNlcnZpY2UiLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3AtY2xpZW50LXV0b3BpYS1zdGF0aWMtd2lkZ2V0IiwidmFyaWF0ZSI6ImluZGV4IiwicGFyYW1ldGVycyI6eyJkeW5hbWljIjoidHJ1ZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoiaW4tYXBwLXNkay1uZXctaW50ZXJuYWwtYnJvd3NlciIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6Im5ldy1pbnRlcm5hbC1icm93c2VyLWVuYWJsZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLXNkay1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImtwLWNsaWVudC11dG9waWEtd2Vidmlldy1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImluLWFwcC1zZGstY2FyZC1zY2FubmluZyIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6ImNhcmQtc2Nhbm5pbmctZW5hYmxlIn19XSwicmVnaW9uIjoiZXUiLCJvcmRlcl9hbW91bnQiOjU5ODc1LCJvZmZlcmluZ19vcHRzIjoyLCJvbyI6ImQyIiwidmVyc2lvbiI6InYxLjEwLjAtMTU5MC1nM2ViYzM5MDciLCJpIjoiYnQifQ.I9AZJvuLl2B-_8huYVxfkapctPaNyiLSbYKqYwkjF0gzJ6akVOKXBEdMJF1BgVUlK9kc4E-6zDO0NeH9E31F69m2EiWBm7D19w9QySRBZTpRfNmBhSLr-J6SjngNNzs-xM4tN8-u3_bfsBmu-84i7SkGwSt7N539aeqvJrvb0TSSHupRaM_Mwj4u_iqZu8VTvYAzreovVkpPmq5c3rJtGBm2tzUQ-o_W5vgu5smLPb9zcwAT7FoXsDPkjtp8S4IYbXvpZo5zrbrwQ-g7x13-xvBUzw2b4Ldf-PDqeiMEppKwgLqf4Hmp0ukmOSBqb0tLskx4XiROYgfu5JBfPtgkfQ\",\"payment_method_categories\":[{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_over_time\",\"name\":\"Monthly financing\"},{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_later\",\"name\":\"Buy now, pay later\"},{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_now\",\"name\":\"Pay now\"}],\"session_id\":\"16bf4951-9e9b-63e4-a043-1e372b07be26\"},\"session_hash\":\"c519ee7cf570945297ee14f3ea8b79da\",\"session_country\":\"SE\",\"session_locale\":\"en_US\"}"
+          },
+          {
+            "id": 61592,
+            "key": "_wc_klarna_environment",
+            "value": "test"
+          },
+          {
+            "id": 61593,
+            "key": "_wc_klarna_country",
+            "value": "SE"
+          },
+          {
+            "id": 61594,
+            "key": "_kp_session_id",
+            "value": "16bf4951-9e9b-63e4-a043-1e372b07be26"
+          },
+          {
+            "id": 61598,
+            "key": "_wc_klarna_order_id",
+            "value": "d2c3c127-6e00-4b1f-8542-e20c3f378bc1"
+          },
+          {
+            "id": 61599,
+            "key": "_krokedil_environment_info",
+            "value": {
+              "php_version": "8.3.8",
+              "wc_version": "9.6.2",
+              "wp_version": "6.7.2",
+              "plugin_version": "3.9.2"
+            }
+          },
+          {
+            "id": 61600,
+            "key": "_ppu_upsell_ids",
+            "value": [
+              "5ffffbb9-ec7f-470a-9d71-ad70fda1bb3a"
+            ]
+          }
+        ],
+        "line_items": {
+          "7893": {
+            "id": 7893,
+            "order_id": 1813,
+            "name": "Hoodie",
+            "product_id": 16,
+            "variation_id": 0,
+            "quantity": 1,
+            "tax_class": "",
+            "subtotal": "350",
+            "subtotal_tax": "87.5",
+            "total": "350",
+            "total_tax": "87.5",
+            "taxes": {
+              "total": {
+                "26": "87.5"
+              },
+              "subtotal": {
+                "26": "87.5"
+              }
+            },
+            "meta_data": [
+              {
+                "id": 65090,
+                "key": "_line_subtotal_base_currency",
+                "value": "350"
+              },
+              {
+                "id": 65092,
+                "key": "_line_subtotal_tax_base_currency",
+                "value": "87.5"
+              },
+              {
+                "id": 65094,
+                "key": "_line_total_base_currency",
+                "value": "350"
+              },
+              {
+                "id": 65096,
+                "key": "_line_tax_base_currency",
+                "value": "87.5"
+              }
+            ]
+          },
+          "7894": {
+            "id": 7894,
+            "order_id": 1813,
+            "name": "Liniment subscription",
+            "product_id": 293,
+            "variation_id": 0,
+            "quantity": 1,
+            "tax_class": "",
+            "subtotal": "80",
+            "subtotal_tax": "20",
+            "total": "80",
+            "total_tax": "20",
+            "taxes": {
+              "total": {
+                "26": "20"
+              },
+              "subtotal": {
+                "26": "20"
+              }
+            },
+            "meta_data": [
+              {
+                "id": 65103,
+                "key": "_line_subtotal_base_currency",
+                "value": "80"
+              },
+              {
+                "id": 65105,
+                "key": "_line_subtotal_tax_base_currency",
+                "value": "20"
+              },
+              {
+                "id": 65107,
+                "key": "_line_total_base_currency",
+                "value": "80"
+              },
+              {
+                "id": 65109,
+                "key": "_line_tax_base_currency",
+                "value": "20"
+              }
+            ]
+          },
+          "7903": {
+            "id": 7903,
+            "order_id": 1813,
+            "name": "T-Shirt",
+            "product_id": 15,
+            "variation_id": 0,
+            "quantity": 1,
+            "tax_class": "",
+            "subtotal": "135",
+            "subtotal_tax": "33.75",
+            "total": "135",
+            "total_tax": "33.75",
+            "taxes": {
+              "total": {
+                "26": "33.75"
+              },
+              "subtotal": {
+                "26": "33.75"
+              }
+            },
+            "meta_data": [
+              {
+                "id": 65177,
+                "key": "_line_subtotal_base_currency",
+                "value": "135"
+              },
+              {
+                "id": 65179,
+                "key": "_line_subtotal_tax_base_currency",
+                "value": "33.75"
+              },
+              {
+                "id": 65181,
+                "key": "_line_total_base_currency",
+                "value": "135"
+              },
+              {
+                "id": 65183,
+                "key": "_line_tax_base_currency",
+                "value": "33.75"
+              },
+              {
+                "id": 65186,
+                "key": "_ppu_upsell_id",
+                "value": "5ffffbb9-ec7f-470a-9d71-ad70fda1bb3a"
+              }
+            ]
+          }
+        },
+        "tax_lines": {
+          "7898": {
+            "id": 7898,
+            "order_id": 1813,
+            "name": "",
+            "rate_code": "SE-VAT SE-1",
+            "rate_id": 26,
+            "label": "VAT SE",
+            "compound": false,
+            "tax_total": "141.25",
+            "shipping_tax_total": "12.25",
+            "rate_percent": 25,
+            "meta_data": [
+              {
+                "id": 65135,
+                "key": "tax_amount_base_currency",
+                "value": "141.25"
+              },
+              {
+                "id": 65137,
+                "key": "shipping_tax_amount_base_currency",
+                "value": "12.25"
+              }
+            ]
+          }
+        },
+        "shipping_lines": {
+          "7899": {
+            "id": 7899,
+            "order_id": 1813,
+            "name": "Flat rate",
+            "method_title": "Flat rate",
+            "method_id": "flat_rate",
+            "instance_id": "3",
+            "total": "49.00",
+            "total_tax": "12.25",
+            "taxes": {
+              "total": {
+                "26": "12.25"
+              }
+            },
+            "tax_status": "taxable",
+            "meta_data": [
+              {
+                "id": 65145,
+                "key": "Items",
+                "value": "Hoodie &times; 1, Liniment subscription &times; 1"
+              }
+            ]
+          }
+        },
+        "fee_lines": [],
+        "coupon_lines": [],
+        "order_comments": [
+          {
+            "id": 698,
+            "date_created": {
+              "date": "2025-02-17 21:07:26.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "The customer added <i>T-Shirt</i> to the order through an upsell offer",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          },
+          {
+            "id": 697,
+            "date_created": {
+              "date": "2025-02-17 21:07:19.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "The Klarna order was successfully completed",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          },
+          {
+            "id": 696,
+            "date_created": {
+              "date": "2025-02-17 21:07:19.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Payment via Klarna Payments, order ID: d2c3c127-6e00-4b1f-8542-e20c3f378bc1",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          },
+          {
+            "id": 693,
+            "date_created": {
+              "date": "2025-02-17 21:07:19.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Order status changed from Pending payment to Processing.",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          },
+          {
+            "id": 692,
+            "date_created": {
+              "date": "2025-02-17 21:06:51.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Order status changed from Draft to Pending payment.",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1813
+          }
+        ]
+      }    
+    console.log(order)
+
+    let templeteString = `<div class="container">
         <div class="main-content">
             <div class="section">
-                <h2>Order #testkp301 detaljer</h2>
-                <p><strong>Betalning via Klarna</strong> (ID: 1695b973-481c-4b5b-a9dd-87d4790001)</p>
-                <p><strong>Datum:</strong> 2025-03-03 18:18</p>
-                <p><strong>Status:</strong> Bearbetas</p>
-                <p><strong>Kund:</strong> Michael Bengtsson (mathias@krokedil.se)</p>
+                <h2>Order #${order.id}</h2>
+                <p><strong>Betalning via transaction ID</strong> (: ${order.transaction_id})</p>
+                <p><strong>Date created:</strong> ${order.date_created.date}</p>
+                <p><strong>Status:</strong> ${order.status}</p>
             </div>
             <div class="section">
-                <h2>Fakturaadress</h2>
-                <p><strong>Namn:</strong> Martin Krokedil</p>
-                <p><strong>Adress:</strong> Hellersbergstraße 14, 414 60 Neuss</p>
-                <p><strong>Email:</strong> test@email.de</p>
-                <p><strong>Telefon:</strong> +491231392002</p>
+                <h2>Billing</h2>
+                <p><strong>Company:</strong> ${order.billing.company}</p>
+                <p><strong>Namn:</strong> ${order.billing.first_name} ${order.billing.last_name}</p>
+                <p><strong>Adress:</strong> ${order.billing.address_1} ${order.billing.address_2}, ${order.billing.postcode} ${order.billing.city}</p>
+                <p><strong>Email:</strong> ${order.billing.email}</p>
+                <p><strong>Telefon:</strong> ${order.billing.phone}</p>
             </div>
             <div class="section">
-                <h2> Leveransadress</h2>
-                <p><strong>Namn:</strong> Martin Krokedil</p>
-                <p><strong>Adress:</strong> Hellersbergstraße 14, 414 60 Neuss</p>
+                <h2>Shipping</h2>
+                <p><strong>Namn:</strong> ${order.shipping.first_name} ${order.shipping.last_name}</p>
+                <p><strong>Adress:</strong> ${order.shipping.address_1} ${order.shipping.address_2}, ${order.shipping.postcode} ${order.shipping.city}</p>
+                <p><strong>Telefon:</strong> ${order.shipping.phone}</p>
             </div>
             <div class="section">
                 <h2>Orderdetaljer</h2>
@@ -161,4 +607,12 @@
         </table>
     </div>
     </div>
+`
+// use innerhtml to display the order details
+document.body.innerHTML = templeteString
+})
+</script>
+</head>
+
+<body>
 </body>
