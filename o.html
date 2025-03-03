@@ -539,6 +539,14 @@ let metaData = Object.values(order.meta_data.map(d =>
                 <td>${d.value}</td>
             </tr>`))
 
+let orderNotes = Object.values(order.order_comments).map(order_comment => `
+            <div class="section">
+                <p>${order_comment.content}</p>
+                <p>Added by: ${order_comment.added_by}</p>
+                <p>${order_comment.date_created.date}</p>
+            </div>`)
+
+
     let templeteString = `<div class="container">
         <div class="main-content">
             <div class="section">
@@ -579,16 +587,7 @@ let metaData = Object.values(order.meta_data.map(d =>
         </div>
         <div class="sidebar">
             <h2>Ordernoteringar</h2>
-            <div class="section">
-                <p>Betalning via Klarna Payments, order ID: 1695b973-481c-4b5b-a9dd-87d4790001</p>
-                <p>Orderstatus ändrad från Väntande betalning till Bearbetas</p>
-                <p>Datum: 2025-03-03 18:18</p>
-            </div>
-            <div class="section">
-                <p>Betalning via Klarna Payments, order ID: 1695b973-481c-4b5b-a9dd-87d4790001</p>
-                <p>Orderstatus ändrad från Väntande betalning till Bearbetas</p>
-                <p>Datum: 2025-03-03 18:18</p>
-            </div>
+        ${orderNotes}
         </div>
     </div>
     <div class="section">
