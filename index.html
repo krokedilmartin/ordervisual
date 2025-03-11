@@ -145,7 +145,7 @@
 
     // ========= FUNKTION: VISA ORDERVY =========
     function displayOrder(order) {
-      // Tabell för line_items
+      // 1) Tabell för line_items (Produkter)
       const lineItemsHtml = Object.values(order.line_items || {}).map(item => {
         return `
           <tr>
@@ -158,7 +158,24 @@
         `;
       }).join("");
 
-      // Tabell för coupon_lines
+      // 2) Tabell för shipping_lines
+      //    (Visas efter ”Produkter” för att se fraktmetoder)
+      let shippingLinesHtml = "";
+      if (order.shipping_lines && Object.keys(order.shipping_lines).length > 0) {
+        shippingLinesHtml = Object.values(order.shipping_lines).map(line => {
+          return `
+            <tr>
+              <td>${line.name}</td>
+              <td>${line.method_title}</td>
+              <td>${line.method_id}</td>
+              <td>${line.total}</td>
+              <td>${line.total_tax}</td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      // 3) Tabell för coupon_lines
       let couponLinesHtml = "";
       if (order.coupon_lines && Object.keys(order.coupon_lines).length > 0) {
         couponLinesHtml = Object.values(order.coupon_lines).map(coupon => {
@@ -177,7 +194,7 @@
         }).join("");
       }
 
-      // Tabell för meta_data
+      // 4) Tabell för meta_data
       const metaDataHtml = (order.meta_data || []).map(md => {
         return `
           <tr>
@@ -187,7 +204,7 @@
         `;
       }).join("");
 
-      // Ordernoteringar
+      // 5) Ordernoteringar
       let orderNotesHtml = "";
       if (order.order_comments) {
         orderNotesHtml = order.order_comments.map(note => {
@@ -201,7 +218,7 @@
         }).join("");
       }
 
-      // Shipping-info
+      // 6) Shipping-adressinfo
       let shippingHtml = "";
       if (order.shipping) {
         shippingHtml = `
@@ -212,6 +229,20 @@
             <p><strong>Telefon:</strong> ${order.shipping.phone || ''}</p>
           </div>
         `;
+      }
+
+      // 7) Extra: Beräkna items-subtotal
+      //    Summan av line_items -> subtotal
+      let itemsSubtotal = 0;
+      Object.values(order.line_items || {}).forEach(item => {
+        itemsSubtotal += parseFloat(item.subtotal || 0);
+      });
+
+      // 8) Kolla om ordern är betald -> Visa "Paid: x.xx kr"
+      let paidHtml = "";
+      if (order.date_paid && order.date_paid.date) {
+        // Om date_paid inte är null => antar att ordern är betald
+        paidHtml = `<hr><p><strong>Paid:</strong> ${order.total} kr</p>`;
       }
 
       // HTML för hela sidan
@@ -270,6 +301,35 @@
               </div>
             </div>
 
+            <!-- Shipping lines (efter Produkter) -->
+            ${
+              shippingLinesHtml 
+                ? `
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Shipping lines</h5>
+                      <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                          <thead class="table-light">
+                            <tr>
+                              <th>Name</th>
+                              <th>Method Title</th>
+                              <th>Method ID</th>
+                              <th>Cost (excl. tax)</th>
+                              <th>Tax</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            ${shippingLinesHtml}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                `
+                : ''
+            }
+
             <!-- Kuponger (om de finns) -->
             ${
               couponLinesHtml
@@ -299,13 +359,20 @@
                 : ''
             }
 
-            <!-- Ordersummering (Total, Moms, Frakt) -->
+            <!-- Ordersummering (Items Subtotal, Coupon(s), Shipping, VAT, Total, ev. Paid) -->
             <div class="card mb-3">
               <div class="card-body">
                 <h5 class="card-title">Ordersummering</h5>
-                <p><strong>Total:</strong> ${order.total}</p>
-                <p><strong>Moms:</strong> ${order.total_tax}</p>
-                <p><strong>Frakt:</strong> ${order.shipping_total}</p>
+                <p><strong>Items Subtotal:</strong> ${itemsSubtotal.toFixed(2)} kr</p>
+                ${
+                  order.discount_total 
+                    ? `<p><strong>Coupon(s):</strong> - ${parseFloat(order.discount_total).toFixed(2)} kr</p>`
+                    : ``
+                }
+                <p><strong>Shipping:</strong> ${parseFloat(order.shipping_total).toFixed(2)} kr</p>
+                <p><strong>VAT SE:</strong> ${parseFloat(order.total_tax).toFixed(2)} kr</p>
+                <p><strong>Order Total:</strong> ${parseFloat(order.total).toFixed(2)} kr</p>
+                ${paidHtml}
               </div>
             </div>
           </div>
