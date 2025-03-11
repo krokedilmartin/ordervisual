@@ -1,0 +1,480 @@
+{
+"orders": {
+    "1822": {
+      "wc_order": {
+        "id": 1822,
+        "parent_id": 0,
+        "status": "processing",
+        "currency": "SEK",
+        "version": "9.6.2",
+        "prices_include_tax": false,
+        "date_created": {
+          "date": "2025-03-11 13:10:26.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "date_modified": {
+          "date": "2025-03-11 13:10:45.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "discount_total": "0",
+        "discount_tax": "0",
+        "shipping_total": "49",
+        "shipping_tax": "12.25",
+        "cart_tax": "225",
+        "total": "1186.25",
+        "total_tax": "237.25",
+        "customer_id": 1,
+        "order_key": "wc_order_snI3nAbn7e4tR",
+        "billing": {
+          "first_name": "bill",
+          "last_name": "larsson",
+          "company": "",
+          "address_1": "stora huvudgatan 1",
+          "address_2": "lgh 150",
+          "city": "arvika",
+          "state": "",
+          "postcode": "671 31",
+          "country": "SE",
+          "email": "checkout-se@testdrive.klarna.com",
+          "phone": "07200000001"
+        },
+        "shipping": {
+          "first_name": "shippen",
+          "last_name": "efternamn",
+          "company": "",
+          "address_1": "Lilla Tvärgatan 8",
+          "address_2": "lgh 260",
+          "city": "Löberöd",
+          "state": "",
+          "postcode": "241 62",
+          "country": "SE",
+          "phone": "07200000001"
+        },
+        "payment_method": "klarna_payments",
+        "payment_method_title": "Klarna",
+        "transaction_id": "c625d2bd-e64b-49e9-97d3-347852549608",
+        "customer_ip_address": "95.193.74.138",
+        "customer_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+        "created_via": "store-api",
+        "customer_note": "här är en specialnote jag fyller i i kassan",
+        "date_completed": null,
+        "date_paid": {
+          "date": "2025-03-11 13:10:45.000000",
+          "timezone_type": 1,
+          "timezone": "+00:00"
+        },
+        "cart_hash": "d3783463cb52e9ab9825542c30fd092c",
+        "order_stock_reduced": true,
+        "download_permissions_granted": true,
+        "new_order_email_sent": false,
+        "recorded_sales": true,
+        "recorded_coupon_usage_counts": true,
+        "number": "kp-1378-demo",
+        "meta_data": [
+          {
+            "id": 61766,
+            "key": "_shipping_hash",
+            "value": "9d4568c009d203ab10e33ea9953a0264"
+          },
+          {
+            "id": 61767,
+            "key": "_coupons_hash",
+            "value": "d751713988987e9331980363e24189ce"
+          },
+          {
+            "id": 61768,
+            "key": "_fees_hash",
+            "value": "d751713988987e9331980363e24189ce"
+          },
+          {
+            "id": 61769,
+            "key": "_taxes_hash",
+            "value": "819ab25337396fe4d99fa89a96458075"
+          },
+          {
+            "id": 61770,
+            "key": "is_vat_exempt",
+            "value": "no"
+          },
+          {
+            "id": 61771,
+            "key": "_order_total_base_currency",
+            "value": "1186.25"
+          },
+          {
+            "id": 61772,
+            "key": "_cart_discount_base_currency",
+            "value": "0"
+          },
+          {
+            "id": 61773,
+            "key": "_order_shipping_base_currency",
+            "value": "49"
+          },
+          {
+            "id": 61774,
+            "key": "_order_tax_base_currency",
+            "value": "225"
+          },
+          {
+            "id": 61775,
+            "key": "_order_shipping_tax_base_currency",
+            "value": "12.25"
+          },
+          {
+            "id": 61776,
+            "key": "_cart_discount_tax_base_currency",
+            "value": "0"
+          },
+          {
+            "id": 61777,
+            "key": "_base_currency_exchange_rate",
+            "value": "1"
+          },
+          {
+            "id": 61780,
+            "key": "_order_number",
+            "value": "1378"
+          },
+          {
+            "id": 61781,
+            "key": "_order_number_formatted",
+            "value": "kp-1378-demo"
+          },
+          {
+            "id": 61782,
+            "key": "_order_number_meta",
+            "value": "1378"
+          },
+          {
+            "id": 61783,
+            "key": "_kp_session_data",
+            "value": "{\"klarna_session\":{\"client_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjgyMzA1ZWJjLWI4MTEtMzYzNy1hYTRjLTY2ZWNhMTg3NGYzZCJ9.eyJzZXNzaW9uX2lkIjoiNWRiMTMzNDEtNzFjYy02MjVlLWFiMDctYWI4MDA1ZGNhZTUxIiwiYmFzZV91cmwiOiJodHRwczovL2pzLnBsYXlncm91bmQua2xhcm5hLmNvbS9ldS9rcCIsImRlc2lnbiI6ImtsYXJuYSIsImxhbmd1YWdlIjoiZW4iLCJwdXJjaGFzZV9jb3VudHJ5IjoiU0UiLCJlbnZpcm9ubWVudCI6InBsYXlncm91bmQiLCJtZXJjaGFudF9uYW1lIjoiUGxheWdyb3VuZCBEZW1vIE1lcmNoYW50Iiwic2Vzc2lvbl90eXBlIjoiUEFZTUVOVFMiLCJjbGllbnRfZXZlbnRfYmFzZV91cmwiOiJodHRwczovL2V1LnBsYXlncm91bmQua2xhcm5hZXZ0LmNvbSIsInNjaGVtZSI6dHJ1ZSwiZXhwZXJpbWVudHMiOlt7Im5hbWUiOiJrcGMtcHNlbC00NDI5IiwidmFyaWF0ZSI6ImEifSx7Im5hbWUiOiJrcC1jbGllbnQtb25lLXB1cmNoYXNlLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3BjLTFrLXNlcnZpY2UiLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3AtY2xpZW50LXV0b3BpYS1zdGF0aWMtd2lkZ2V0IiwidmFyaWF0ZSI6ImluZGV4IiwicGFyYW1ldGVycyI6eyJkeW5hbWljIjoidHJ1ZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoiaW4tYXBwLXNkay1uZXctaW50ZXJuYWwtYnJvd3NlciIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6Im5ldy1pbnRlcm5hbC1icm93c2VyLWVuYWJsZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLXNkay1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImtwLWNsaWVudC11dG9waWEtd2Vidmlldy1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImluLWFwcC1zZGstY2FyZC1zY2FubmluZyIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6ImNhcmQtc2Nhbm5pbmctZW5hYmxlIn19XSwicmVnaW9uIjoiZXUiLCJvcmRlcl9hbW91bnQiOjExODYyNSwib2ZmZXJpbmdfb3B0cyI6Miwib28iOiJkMiIsInZlcnNpb24iOiJ2MS4xMC4wLTE1OTAtZzNlYmMzOTA3In0.exAlYDaZxipYgQQ8uwCD0b95HDNR2rfFjHPf2dJ6dyfextWZit1Mg6zQWUGfEYakauRXo43p7o1Y5Q3ISIOOf5z-cpJG2yV_fIjRQ35yORIVwOvirUN7GLWq7ofLN-QIw9wKkL3ZoxVmTiEOgC9dk4pCO-u0qB8G6jZgmCOlvYAu0tHyDVSOW3XHLeHR_K2v_KneNB72wwu2GwVwakflPQVr9ZyBlWnwBmlPuxWKBIb3xi-2wOREcr1IybpZKLmmwpgLYXGJcmVY0bErxL6qggGbSp3YdjyjgjrP8J7LQ5UcHjjW2m7Nw3nkhnwZXNWdJE_ve8kkwsydTeY-GFZviQ\",\"payment_method_categories\":[{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_now\",\"name\":\"Pay now\"},{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_later\",\"name\":\"Buy now, pay later\"},{\"asset_urls\":{\"descriptive\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\",\"standard\":\"https:\\/\\/x.klarnacdn.net\\/payment-method\\/assets\\/badges\\/generic\\/klarna.svg\"},\"identifier\":\"pay_over_time\",\"name\":\"Monthly financing\"}],\"session_id\":\"5db13341-71cc-625e-ab07-ab8005dcae51\"},\"session_hash\":\"acc57673e215e87c36b71db16fd33309\",\"session_country\":\"SE\",\"session_locale\":\"en_US\"}"
+          },
+          {
+            "id": 61784,
+            "key": "_wc_klarna_environment",
+            "value": "test"
+          },
+          {
+            "id": 61785,
+            "key": "_wc_klarna_country",
+            "value": "SE"
+          },
+          {
+            "id": 61786,
+            "key": "_kp_session_id",
+            "value": "5db13341-71cc-625e-ab07-ab8005dcae51"
+          },
+          {
+            "id": 61790,
+            "key": "_wc_klarna_order_id",
+            "value": "c625d2bd-e64b-49e9-97d3-347852549608"
+          },
+          {
+            "id": 61791,
+            "key": "_krokedil_environment_info",
+            "value": {
+              "php_version": "8.3.16",
+              "wc_version": "9.6.2",
+              "wp_version": "6.7.2",
+              "plugin_version": "4.0.0"
+            }
+          }
+        ],
+        "line_items": {
+          "7928": {
+            "id": 7928,
+            "order_id": 1822,
+            "name": "Dumbbell",
+            "product_id": 28,
+            "variation_id": 0,
+            "quantity": 1,
+            "tax_class": "",
+            "subtotal": "200",
+            "subtotal_tax": "50",
+            "total": "200",
+            "total_tax": "50",
+            "taxes": {
+              "total": {
+                "26": "50"
+              },
+              "subtotal": {
+                "26": "50"
+              }
+            },
+            "meta_data": [
+              {
+                "id": 65410,
+                "key": "_line_subtotal_base_currency",
+                "value": "200"
+              },
+              {
+                "id": 65412,
+                "key": "_line_subtotal_tax_base_currency",
+                "value": "50"
+              },
+              {
+                "id": 65414,
+                "key": "_line_total_base_currency",
+                "value": "200"
+              },
+              {
+                "id": 65416,
+                "key": "_line_tax_base_currency",
+                "value": "50"
+              }
+            ]
+          },
+          "7929": {
+            "id": 7929,
+            "order_id": 1822,
+            "name": "Hoodie",
+            "product_id": 16,
+            "variation_id": 0,
+            "quantity": 2,
+            "tax_class": "",
+            "subtotal": "700",
+            "subtotal_tax": "175",
+            "total": "700",
+            "total_tax": "175",
+            "taxes": {
+              "total": {
+                "26": "175"
+              },
+              "subtotal": {
+                "26": "175"
+              }
+            },
+            "meta_data": [
+              {
+                "id": 65423,
+                "key": "_line_subtotal_base_currency",
+                "value": "700"
+              },
+              {
+                "id": 65425,
+                "key": "_line_subtotal_tax_base_currency",
+                "value": "175"
+              },
+              {
+                "id": 65427,
+                "key": "_line_total_base_currency",
+                "value": "700"
+              },
+              {
+                "id": 65429,
+                "key": "_line_tax_base_currency",
+                "value": "175"
+              }
+            ]
+          }
+        },
+        "tax_lines": {
+          "7955": {
+            "id": 7955,
+            "order_id": 1822,
+            "name": "",
+            "rate_code": "SE-VAT SE-1",
+            "rate_id": 26,
+            "label": "VAT SE",
+            "compound": false,
+            "tax_total": "225",
+            "shipping_tax_total": "12.25",
+            "rate_percent": 25,
+            "meta_data": [
+              {
+                "id": 65609,
+                "key": "tax_amount_base_currency",
+                "value": "225"
+              },
+              {
+                "id": 65611,
+                "key": "shipping_tax_amount_base_currency",
+                "value": "12.25"
+              }
+            ]
+          }
+        },
+        "shipping_lines": {
+          "7956": {
+            "id": 7956,
+            "order_id": 1822,
+            "name": "Flat rate",
+            "method_title": "Flat rate",
+            "method_id": "flat_rate",
+            "instance_id": "3",
+            "total": "49.00",
+            "total_tax": "12.25",
+            "taxes": {
+              "total": {
+                "26": "12.25"
+              }
+            },
+            "tax_status": "taxable",
+            "meta_data": [
+              {
+                "id": 65619,
+                "key": "Items",
+                "value": "Dumbbell &times; 1, Hoodie &times; 2"
+              }
+            ]
+          }
+        },
+        "fee_lines": [],
+        "coupon_lines": [],
+        "order_comments": [
+          {
+            "id": 702,
+            "date_created": {
+              "date": "2025-03-11 13:10:45.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "The Klarna order was successfully completed",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1822
+          },
+          {
+            "id": 701,
+            "date_created": {
+              "date": "2025-03-11 13:10:45.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Payment via Klarna Payments, order ID: c625d2bd-e64b-49e9-97d3-347852549608",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1822
+          },
+          {
+            "id": 700,
+            "date_created": {
+              "date": "2025-03-11 13:10:45.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Order status changed from Pending payment to Processing.",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1822
+          },
+          {
+            "id": 699,
+            "date_created": {
+              "date": "2025-03-11 13:10:26.000000",
+              "timezone_type": 1,
+              "timezone": "+00:00"
+            },
+            "content": "Order status changed from Draft to Pending payment.",
+            "customer_note": false,
+            "added_by": "system",
+            "order_id": 1822
+          }
+        ]
+      },
+      "integration_order": {
+        "order_id": "c625d2bd-e64b-49e9-97d3-347852549608",
+        "status": "AUTHORIZED",
+        "fraud_status": "ACCEPTED",
+        "order_amount": 118625,
+        "original_order_amount": 118625,
+        "captured_amount": 0,
+        "refunded_amount": 0,
+        "remaining_authorized_amount": 118625,
+        "purchase_currency": "SEK",
+        "locale": "en-SE",
+        "order_lines": [
+          {
+            "reference": "woo-dumbbell-single",
+            "type": "physical",
+            "quantity": 1,
+            "quantity_unit": "pcs",
+            "name": "Dumbbell",
+            "total_amount": 25000,
+            "unit_price": 25000,
+            "total_discount_amount": 0,
+            "tax_rate": 2500,
+            "total_tax_amount": 5000,
+            "product_url": "https://kp-export-order.krokedil.site/product/dumbbell-single/",
+            "image_url": "https://kp-export-order.krokedil.site/wp-content/uploads/2023/09/weight-300x300.jpg"
+          },
+          {
+            "reference": "woo-hoodie",
+            "type": "physical",
+            "quantity": 2,
+            "quantity_unit": "pcs",
+            "name": "Hoodie",
+            "total_amount": 87500,
+            "unit_price": 43750,
+            "total_discount_amount": 0,
+            "tax_rate": 2500,
+            "total_tax_amount": 17500,
+            "product_url": "https://kp-export-order.krokedil.site/product/hoodie/",
+            "image_url": "https://kp-export-order.krokedil.site/wp-content/uploads/2023/11/hoodie-300x300.jpg"
+          },
+          {
+            "reference": "flat_rate:3",
+            "type": "shipping_fee",
+            "quantity": 1,
+            "quantity_unit": "pcs",
+            "name": "Flat rate",
+            "total_amount": 6125,
+            "unit_price": 6125,
+            "total_discount_amount": 0,
+            "tax_rate": 2500,
+            "total_tax_amount": 1225
+          }
+        ],
+        "merchant_reference1": "kp-1378-demo",
+        "merchant_reference2": "1822",
+        "klarna_reference": "J4ZGV9CC",
+        "billing_address": {
+          "given_name": "Mary",
+          "family_name": "Test-UAPS",
+          "title": "",
+          "street_address": "Södra Blasieholmshamnen 2",
+          "street_address2": "fff",
+          "postal_code": "111 48",
+          "city": "Stockholm",
+          "region": "",
+          "country": "SE",
+          "email": "generated_email_de+1732801159500@example.com",
+          "phone": "+46701740615"
+        },
+        "shipping_address": {
+          "given_name": "shippen",
+          "family_name": "efternamn",
+          "title": "",
+          "street_address": "Lilla Tvärgatan 8",
+          "street_address2": "lgh 260",
+          "postal_code": "24162",
+          "city": "Löberöd",
+          "region": "",
+          "country": "SE",
+          "email": "checkout-se@testdrive.klarna.com",
+          "phone": "07200000001"
+        },
+        "created_at": "2025-03-11T13:10:45.242Z",
+        "purchase_country": "SE",
+        "expires_at": "2025-04-08T00:00:00.000Z",
+        "captures": [],
+        "refunds": [],
+        "initial_payment_method": {
+          "type": "INVOICE",
+          "description": "Pay later",
+          "number_of_installments": 1
+        },
+        "shipping_info": []
+      },
+      "logs": [
+        "2025-03-11T13:10:26+00:00 NOTICE {\"type\":\"POST\",\"title\":\"Create session\",\"arguments\":{\"country\":\"SE\",\"order_id\":1822,\"include_address\":true},\"request\":{\"headers\":{\"Authorization\":\"[REDACTED]\",\"Content-Type\":\"application/json\"},\"user-agent\":\"WordPress/6.7.2; https://kp-export-order.krokedil.site - WooCommerce: 9.6.2 - KP: 4.0.0 - PHP Version: 8.3.16 - Krokedil\",\"method\":\"POST\",\"timeout\":10,\"body\":{\"purchase_country\":\"SE\",\"purchase_currency\":\"SEK\",\"locale\":\"en-US\",\"order_amount\":118625,\"order_tax_amount\":23725,\"order_lines\":[{\"image_url\":\"https://kp-export-order.krokedil.site/wp-content/uploads/2023/09/weight-300x300.jpg\",\"name\":\"Dumbbell\",\"product_url\":\"https://kp-export-order.krokedil.site/product/dumbbell-single/\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"woo-dumbbell-single\",\"tax_rate\":2500,\"total_amount\":25000,\"total_discount_amount\":0,\"total_tax_amount\":5000,\"type\":\"physical\",\"unit_price\":25000},{\"image_url\":\"https://kp-export-order.krokedil.site/wp-content/uploads/2023/11/hoodie-300x300.jpg\",\"name\":\"Hoodie\",\"product_url\":\"https://kp-export-order.krokedil.site/product/hoodie/\",\"quantity\":2,\"quantity_unit\":\"pcs\",\"reference\":\"woo-hoodie\",\"tax_rate\":2500,\"total_amount\":87500,\"total_discount_amount\":0,\"total_tax_amount\":17500,\"type\":\"physical\",\"unit_price\":43750},{\"name\":\"Flat rate\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"flat_rate:3\",\"tax_rate\":2500,\"total_amount\":6125,\"total_discount_amount\":0,\"total_tax_amount\":1225,\"type\":\"shipping_fee\",\"unit_price\":6125}],\"customer\":{\"type\":\"person\"},\"billing_address\":{\"given_name\":\"bill\",\"family_name\":\"larsson\",\"email\":\"checkout-se@testdrive.klarna.com\",\"phone\":\"07200000001\",\"street_address\":\"stora huvudgatan 1\",\"street_address2\":\"lgh 150\",\"postal_code\":\"67131\",\"city\":\"arvika\",\"region\":\"\",\"country\":\"SE\"},\"shipping_address\":{\"given_name\":\"shippen\",\"family_name\":\"efternamn\",\"email\":\"checkout-se@testdrive.klarna.com\",\"phone\":\"07200000001\",\"street_address\":\"Lilla Tvu00e4rgatan 8\",\"street_address2\":\"lgh 260\",\"postal_code\":\"24162\",\"city\":\"Lu00f6beru00f6d\",\"region\":\"\",\"country\":\"SE\"},\"options\":null,\"merchant_urls\":{\"authorization\":\"https://kp-export-order.krokedil.site/wc-api/KP_WC_AUTHORIZATION\"},\"intent\":\"buy\"}},\"request_url\":\"https://api.playground.klarna.com/payments/v1/sessions\",\"response\":{\"body\":{\"client_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjgyMzA1ZWJjLWI4MTEtMzYzNy1hYTRjLTY2ZWNhMTg3NGYzZCJ9.eyJzZXNzaW9uX2lkIjoiNWRiMTMzNDEtNzFjYy02MjVlLWFiMDctYWI4MDA1ZGNhZTUxIiwiYmFzZV91cmwiOiJodHRwczovL2pzLnBsYXlncm91bmQua2xhcm5hLmNvbS9ldS9rcCIsImRlc2lnbiI6ImtsYXJuYSIsImxhbmd1YWdlIjoiZW4iLCJwdXJjaGFzZV9jb3VudHJ5IjoiU0UiLCJlbnZpcm9ubWVudCI6InBsYXlncm91bmQiLCJtZXJjaGFudF9uYW1lIjoiUGxheWdyb3VuZCBEZW1vIE1lcmNoYW50Iiwic2Vzc2lvbl90eXBlIjoiUEFZTUVOVFMiLCJjbGllbnRfZXZlbnRfYmFzZV91cmwiOiJodHRwczovL2V1LnBsYXlncm91bmQua2xhcm5hZXZ0LmNvbSIsInNjaGVtZSI6dHJ1ZSwiZXhwZXJpbWVudHMiOlt7Im5hbWUiOiJrcGMtcHNlbC00NDI5IiwidmFyaWF0ZSI6ImEifSx7Im5hbWUiOiJrcC1jbGllbnQtb25lLXB1cmNoYXNlLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3BjLTFrLXNlcnZpY2UiLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoia3AtY2xpZW50LXV0b3BpYS1zdGF0aWMtd2lkZ2V0IiwidmFyaWF0ZSI6ImluZGV4IiwicGFyYW1ldGVycyI6eyJkeW5hbWljIjoidHJ1ZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLWZsb3ciLCJ2YXJpYXRlIjoidmFyaWF0ZS0xIn0seyJuYW1lIjoiaW4tYXBwLXNkay1uZXctaW50ZXJuYWwtYnJvd3NlciIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6Im5ldy1pbnRlcm5hbC1icm93c2VyLWVuYWJsZSJ9fSx7Im5hbWUiOiJrcC1jbGllbnQtdXRvcGlhLXNkay1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImtwLWNsaWVudC11dG9waWEtd2Vidmlldy1mbG93IiwidmFyaWF0ZSI6InZhcmlhdGUtMSJ9LHsibmFtZSI6ImluLWFwcC1zZGstY2FyZC1zY2FubmluZyIsInBhcmFtZXRlcnMiOnsidmFyaWF0ZV9pZCI6ImNhcmQtc2Nhbm5pbmctZW5hYmxlIn19XSwicmVnaW9uIjoiZXUiLCJvcmRlcl9hbW91bnQiOjExODYyNSwib2ZmZXJpbmdfb3B0cyI6Miwib28iOiJkMiIsInZlcnNpb24iOiJ2MS4xMC4wLTE1OTAtZzNlYmMzOTA3In0.exAlYDaZxipYgQQ8uwCD0b95HDNR2rfFjHPf2dJ6dyfextWZit1Mg6zQWUGfEYakauRXo43p7o1Y5Q3ISIOOf5z-cpJG2yV_fIjRQ35yORIVwOvirUN7GLWq7ofLN-QIw9wKkL3ZoxVmTiEOgC9dk4pCO-u0qB8G6jZgmCOlvYAu0tHyDVSOW3XHLeHR_K2v_KneNB72wwu2GwVwakflPQVr9ZyBlWnwBmlPuxWKBIb3xi-2wOREcr1IybpZKLmmwpgLYXGJcmVY0bErxL6qggGbSp3YdjyjgjrP8J7LQ5UcHjjW2m7Nw3nkhnwZXNWdJE_ve8kkwsydTeY-GFZviQ\",\"payment_method_categories\":[{\"asset_urls\":{\"descriptive\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\",\"standard\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\"},\"identifier\":\"pay_now\",\"name\":\"Pay now\"},{\"asset_urls\":{\"descriptive\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\",\"standard\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\"},\"identifier\":\"pay_later\",\"name\":\"Buy now, pay later\"},{\"asset_urls\":{\"descriptive\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\",\"standard\":\"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg\"},\"identifier\":\"pay_over_time\",\"name\":\"Monthly financing\"}],\"session_id\":\"5db13341-71cc-625e-ab07-ab8005dcae51\"},\"code\":200},\"timestamp\":\"2025-03-11 13:10:26\",\"stack\":[{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/klarna-payments-for-woocommerce/classes/class-wc-gateway-klarna-payments.php\",\"line\":443,\"function\":\"KP_Session->get_session()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/klarna-payments-for-woocommerce/classes/class-wc-gateway-klarna-payments.php\",\"line\":350,\"function\":\"WC_Gateway_Klarna_Payments->process_blocks_order()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Legacy.php\",\"line\":54,\"function\":\"WC_Gateway_Klarna_Payments->process_payment()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Legacy->process_legacy_payment()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":565,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Utilities/CheckoutTrait.php\",\"line\":83,\"function\":\"do_action_ref_array()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php\",\"line\":374,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->process_payment()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AbstractRoute.php\",\"line\":119,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->get_route_post_response()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php\",\"line\":136,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\AbstractRoute->get_response_by_request_method()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":1292,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->get_response()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":1125,\"function\":\"WP_REST_Server->respond_to_request()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":439,\"function\":\"WP_REST_Server->dispatch()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/rest-api.php\",\"line\":449,\"function\":\"WP_REST_Server->serve_request()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"rest_api_loaded()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":565,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp.php\",\"line\":418,\"function\":\"do_action_ref_array()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp.php\",\"line\":813,\"function\":\"WP->parse_request()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/functions.php\",\"line\":1336,\"function\":\"WP->main()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-blog-header.php\",\"line\":16,\"function\":\"wp()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/index.php\",\"line\":17,\"function\":\"require()\"}],\"plugin_version\":\"4.0.0\"} CONTEXT: {\"_legacy\":true}",
+        "2025-03-11T13:10:26+00:00 NOTICE {\"type\":\"POST\",\"title\":\"Create HPP\",\"arguments\":{\"country\":\"SE\",\"session_id\":\"5db13341-71cc-625e-ab07-ab8005dcae51\",\"order_id\":1822},\"request\":{\"headers\":{\"Authorization\":\"[REDACTED]\",\"Content-Type\":\"application/json\"},\"user-agent\":\"WordPress/6.7.2; https://kp-export-order.krokedil.site - WooCommerce: 9.6.2 - KP: 4.0.0 - PHP Version: 8.3.16 - Krokedil\",\"method\":\"POST\",\"timeout\":10,\"body\":{\"payment_session_url\":\"https://api.playground.klarna.com/payments/v1/sessions/5db13341-71cc-625e-ab07-ab8005dcae51\",\"merchant_urls\":{\"success\":\"https://kp-export-order.krokedil.site/checkout/order-received/1822/?key=wc_order_snI3nAbn7e4tR&sid={{session_id}}&authorization_token={{authorization_token}}\",\"cancel\":\"https://kp-export-order.krokedil.site/checkout/\",\"back\":\"https://kp-export-order.krokedil.site/checkout/\",\"failure\":\"https://kp-export-order.krokedil.site/checkout/\",\"error\":\"https://kp-export-order.krokedil.site/checkout/\"}}},\"request_url\":\"https://api.playground.klarna.com/hpp/v1/sessions\",\"response\":{\"body\":{\"session_id\":\"be481cd1-2f13-13cc-9661-8a949cc9d975\",\"redirect_url\":\"https://pay.playground.klarna.com/kustomhpp/hpp/payments/15b0j4A\",\"session_url\":\"https://api.playground.klarna.com/hpp/v1/sessions/be481cd1-2f13-13cc-9661-8a949cc9d975\",\"qr_code_url\":\"https://pay.playground.klarna.com/kustomhpp/hpp/payments/be481cd1-2f13-13cc-9661-8a949cc9d975/qr\",\"distribution_url\":\"https://api.playground.klarna.com/hpp/v1/sessions/be481cd1-2f13-13cc-9661-8a949cc9d975/distribution\",\"expires_at\":\"2025-03-13T11:44:26.615Z\",\"distribution_module\":{\"token\":\"eyJhbGciOiJub25lIn0.eyJzZXNzaW9uX2lkIjoiODI4MTlhZGQtZDlmMi0xYzliLWE2NDMtN2Y5Yzg5YjkyYmEzIiwiaWZyYW1lX3VybCI6Imh0dHBzOi8vcGF5LnBsYXlncm91bmQua2xhcm5hLmNvbS9rdXN0b21ocHAvaHBwL2Rpc3RyaWJ1dGlvbnMvODI4MTlhZGQtZDlmMi0xYzliLWE2NDMtN2Y5Yzg5YjkyYmEzP3Byb2ZpbGVfaWQ9e3twcm9maWxlX2lkfX1cdTAwMjZ2aWV3X2lkPXt7dmlld19pZH19IiwiaWZyYW1lX29yaWdpbiI6Imh0dHBzOi8vcGF5LnBsYXlncm91bmQua2xhcm5hLmNvbSIsImV2ZW50X3VybCI6Imh0dHBzOi8vZXUucGxheWdyb3VuZC5rbGFybmFldnQuY29tIn0.\",\"standalone_url\":\"https://pay.playground.klarna.com/kustomhpp/hpp/distributions/82819add-d9f2-1c9b-a643-7f9c89b92ba3?profile_id={{profile_id}}&view_id={{view_id}}\",\"generation_url\":\"https://api.playground.klarna.com/hpp/v1/sessions/be481cd1-2f13-13cc-9661-8a949cc9d975/distribution-module/token\"}},\"code\":201},\"timestamp\":\"2025-03-11 13:10:26\",\"stack\":[{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/klarna-payments-for-woocommerce/classes/class-wc-gateway-klarna-payments.php\",\"line\":350,\"function\":\"WC_Gateway_Klarna_Payments->process_blocks_order()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Legacy.php\",\"line\":54,\"function\":\"WC_Gateway_Klarna_Payments->process_payment()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Legacy->process_legacy_payment()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":565,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Utilities/CheckoutTrait.php\",\"line\":83,\"function\":\"do_action_ref_array()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php\",\"line\":374,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->process_payment()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AbstractRoute.php\",\"line\":119,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->get_route_post_response()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php\",\"line\":136,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\AbstractRoute->get_response_by_request_method()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":1292,\"function\":\"Automattic\\WooCommerce\\StoreApi\\Routes\\V1\\Checkout->get_response()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":1125,\"function\":\"WP_REST_Server->respond_to_request()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/rest-api/class-wp-rest-server.php\",\"line\":439,\"function\":\"WP_REST_Server->dispatch()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/rest-api.php\",\"line\":449,\"function\":\"WP_REST_Server->serve_request()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"rest_api_loaded()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":565,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp.php\",\"line\":418,\"function\":\"do_action_ref_array()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp.php\",\"line\":813,\"function\":\"WP->parse_request()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/functions.php\",\"line\":1336,\"function\":\"WP->main()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-blog-header.php\",\"line\":16,\"function\":\"wp()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/index.php\",\"line\":17,\"function\":\"require()\"}],\"plugin_version\":\"4.0.0\"} CONTEXT: {\"_legacy\":true}",
+        "2025-03-11T13:10:45+00:00 NOTICE {\"type\":\"POST\",\"title\":\"Place order\",\"arguments\":{\"country\":\"SE\",\"auth_token\":\"aab17690-10e5-6fd4-b707-898b399ea62a\",\"order_id\":\"1822\",\"session_id\":\"5db13341-71cc-625e-ab07-ab8005dcae51\"},\"request\":{\"headers\":{\"Authorization\":\"[REDACTED]\",\"Content-Type\":\"application/json\"},\"user-agent\":\"WordPress/6.7.2; https://kp-export-order.krokedil.site - WooCommerce: 9.6.2 - KP: 4.0.0 - PHP Version: 8.3.16 - Krokedil\",\"method\":\"POST\",\"timeout\":10,\"body\":{\"purchase_country\":\"SE\",\"purchase_currency\":\"SEK\",\"locale\":\"en-US\",\"order_amount\":118625,\"order_tax_amount\":23725,\"order_lines\":[{\"image_url\":\"https://kp-export-order.krokedil.site/wp-content/uploads/2023/09/weight-300x300.jpg\",\"name\":\"Dumbbell\",\"product_url\":\"https://kp-export-order.krokedil.site/product/dumbbell-single/\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"woo-dumbbell-single\",\"tax_rate\":2500,\"total_amount\":25000,\"total_discount_amount\":0,\"total_tax_amount\":5000,\"type\":\"physical\",\"unit_price\":25000},{\"image_url\":\"https://kp-export-order.krokedil.site/wp-content/uploads/2023/11/hoodie-300x300.jpg\",\"name\":\"Hoodie\",\"product_url\":\"https://kp-export-order.krokedil.site/product/hoodie/\",\"quantity\":2,\"quantity_unit\":\"pcs\",\"reference\":\"woo-hoodie\",\"tax_rate\":2500,\"total_amount\":87500,\"total_discount_amount\":0,\"total_tax_amount\":17500,\"type\":\"physical\",\"unit_price\":43750},{\"name\":\"Flat rate\",\"quantity\":1,\"quantity_unit\":\"pcs\",\"reference\":\"flat_rate:3\",\"tax_rate\":2500,\"total_amount\":6125,\"total_discount_amount\":0,\"total_tax_amount\":1225,\"type\":\"shipping_fee\",\"unit_price\":6125}],\"customer\":{\"type\":\"person\"},\"billing_address\":{\"given_name\":\"bill\",\"family_name\":\"larsson\",\"email\":\"checkout-se@testdrive.klarna.com\",\"phone\":\"07200000001\",\"street_address\":\"stora huvudgatan 1\",\"street_address2\":\"lgh 150\",\"postal_code\":\"67131\",\"city\":\"arvika\",\"region\":\"\",\"country\":\"SE\"},\"shipping_address\":{\"given_name\":\"shippen\",\"family_name\":\"efternamn\",\"email\":\"checkout-se@testdrive.klarna.com\",\"phone\":\"07200000001\",\"street_address\":\"Lilla Tvu00e4rgatan 8\",\"street_address2\":\"lgh 260\",\"postal_code\":\"24162\",\"city\":\"Lu00f6beru00f6d\",\"region\":\"\",\"country\":\"SE\"},\"options\":null,\"merchant_urls\":{\"authorization\":\"https://kp-export-order.krokedil.site/wc-api/KP_WC_AUTHORIZATION\",\"confirmation\":\"https://kp-export-order.krokedil.site/checkout/order-received/1822/?key=wc_order_snI3nAbn7e4tR\"},\"merchant_reference1\":\"kp-1378-demo\",\"merchant_reference2\":1822,\"intent\":\"buy\"}},\"request_url\":\"https://api.playground.klarna.com/payments/v1/authorizations/aab17690-10e5-6fd4-b707-898b399ea62a/order\",\"response\":{\"body\":{\"authorized_payment_method\":{\"type\":\"invoice\"},\"fraud_status\":\"ACCEPTED\",\"order_id\":\"c625d2bd-e64b-49e9-97d3-347852549608\",\"redirect_url\":\"https://js.playground.klarna.com/eu/kp/v1/sessions/5db13341-71cc-625e-ab07-ab8005dcae51/redirect\"},\"code\":200},\"timestamp\":\"2025-03-11 13:10:45\",\"stack\":[{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":324,\"function\":\"KP_Callbacks->process_hpp_redirect()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/class-wp-hook.php\",\"line\":348,\"function\":\"WP_Hook->apply_filters()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-includes/plugin.php\",\"line\":517,\"function\":\"WP_Hook->do_action()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-settings.php\",\"line\":704,\"function\":\"do_action()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-config.php\",\"line\":106,\"function\":\"require_once()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-load.php\",\"line\":50,\"function\":\"require_once()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/wp-blog-header.php\",\"line\":13,\"function\":\"require_once()\"},{\"file\":\"/home/fayuvohiku0441/web/kp-export-order.krokedil.site/public_html/index.php\",\"line\":17,\"function\":\"require()\"}],\"plugin_version\":\"4.0.0\"} CONTEXT: {\"_legacy\":true}"
+      ]
+    }
+  },
+}
