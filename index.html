@@ -3,109 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WC Order Viewer</title>
+  <title>WC Order Viewer – Drag & Drop</title>
+  <!-- Bootstrap CSS via CDN -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  >
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-    }
-    .upload-section {
-      max-width: 1200px;
-      margin: 20px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #0073aa;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-left: 10px;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-    }
-    .main-content {
-      flex: 2;
-      margin-right: 20px;
-    }
-    .sidebar {
-      flex: 1;
-      background: #fff;
-      padding: 20px;
-      border-left: 1px solid #ddd;
-    }
-    .section {
-      margin-bottom: 20px;
-      padding: 15px;
-      border: 1px solid #ddd;
-      background: #fff;
-      border-radius: 5px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 15px;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-    .section h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-    .notes {
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px dashed #ccc;
-      border-radius: 5px;
-      background-color: #fafafa;
+    /* Exempel på hur dropzonen kan markeras när en fil dras över */
+    #dropZone.dragover {
+      background-color: #f0f8ff; /* Ljus bakgrund */
+      border-color: #0d6efd;    /* Samma färg som Bootstrap "primary" */
     }
   </style>
 </head>
-<body>
-  <div class="upload-section">
-    <div>
-      <h2>Ladda upp JSON-fil</h2>
-      <input type="file" id="jsonFileInput" accept=".json">
+<body class="bg-light">
+
+  <div class="container my-4">
+    <!-- Instruktioner och nedladdningsknappar -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h2 class="h5 mb-3">
+          Ladda upp en JSON-fil genom att dra och släppa den i rutan nedan<br/>
+          eller klicka för att välja en fil.
+        </h2>
+      </div>
+      <div class="col-md-6 d-flex align-items-end justify-content-md-end">
+        <div>
+          <button class="btn btn-primary me-2 mb-2" id="downloadIntegrationOrder">
+            Ladda ner Integration Order
+          </button>
+          <button class="btn btn-primary me-2 mb-2" id="downloadSystemReport">
+            Ladda ner System Report
+          </button>
+          <button class="btn btn-primary mb-2" id="downloadLogs">
+            Ladda ner Logs
+          </button>
+        </div>
+      </div>
     </div>
-    <div>
-      <button class="btn" id="downloadIntegrationOrder">Ladda ner Integration Order</button>
-      <button class="btn" id="downloadSystemReport">Ladda ner System Report</button>
-      <button class="btn" id="downloadLogs">Ladda ner Logs</button>
+
+    <!-- Själva Dropzone för drag-and-drop -->
+    <div 
+      id="dropZone" 
+      class="p-5 text-center mb-4" 
+      style="border:2px dashed #0d6efd; border-radius:5px; cursor:pointer;"
+    >
+      <p class="text-primary mb-0">Dra och släpp din JSON-fil här</p>
     </div>
+
+    <!-- Dolt filinput som triggas när man klickar på dropzonen -->
+    <input 
+      type="file" 
+      id="fileInput" 
+      accept=".json" 
+      style="display:none;"
+    />
   </div>
 
-  <div id="orderContainer"></div>
+  <!-- Container där ordern visas -->
+  <div class="container">
+    <div id="orderContainer"></div>
+  </div>
+
+  <!-- Bootstrap JS (om du vill använda ex. modals etc.) -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
 
   <script>
-    // Läser in vald JSON och visar order
-    document.getElementById('jsonFileInput').addEventListener('change', function (event) {
+    // ========= DRAG & DROP-LOGIK =========
+    const dropZone = document.getElementById("dropZone");
+    const fileInput = document.getElementById("fileInput");
+
+    // Öppna filväljaren om man klickar i dropZone
+    dropZone.addEventListener("click", () => {
+      fileInput.click();
+    });
+
+    // När man väljer en fil via filväljaren
+    fileInput.addEventListener("change", (event) => {
       const file = event.target.files[0];
-      if (!file) return;
+      if (file) {
+        handleFile(file);
+      }
+    });
+
+    // Standardbeteende för drag & drop: förhindra att webbläsaren öppnar filen direkt
+    ["dragenter", "dragover", "dragleave", "drop"].forEach(evt => {
+      dropZone.addEventListener(evt, e => {
+        e.preventDefault();
+        e.stopPropagation();
+      }, false);
+    });
+
+    // Markera dropZone visuellt när fil dras över
+    dropZone.addEventListener("dragenter", () => {
+      dropZone.classList.add("dragover");
+    });
+    dropZone.addEventListener("dragleave", () => {
+      dropZone.classList.remove("dragover");
+    });
+
+    // När fil släpps i zonen
+    dropZone.addEventListener("drop", (e) => {
+      dropZone.classList.remove("dragover");
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        handleFile(file);
+      }
+    });
+
+    // ========= FILBEHANDLING =========
+    function handleFile(file) {
       const reader = new FileReader();
       reader.onload = function(e) {
         try {
           const data = JSON.parse(e.target.result);
-          // Kontrollera att 'orders' finns och inte är tomt
           if (!data.orders || Object.keys(data.orders).length === 0) {
             throw new Error("Ogiltigt JSON-format: 'orders' saknas eller är tom.");
           }
@@ -115,24 +129,23 @@
           const firstOrderKey = Object.keys(data.orders)[0];
           const selectedOrder = data.orders[firstOrderKey];
 
-          // Kontrollera att wc_order finns
           if (!selectedOrder.wc_order) {
             throw new Error("wc_order saknas i den valda ordern.");
           }
 
-          // Visa order
+          // Visa ordern
           displayOrder(selectedOrder.wc_order);
         } catch (error) {
           console.error("Fel vid tolkning av JSON:", error);
-          alert("Kunde inte läsa in JSON‑filen. Kontrollera att filen har rätt format.");
+          alert("Kunde inte läsa in JSON-filen. Kontrollera att den är korrekt formaterad.");
         }
       };
       reader.readAsText(file);
-    });
+    }
 
-    // Funktion som renderar ordern på sidan
+    // ========= FUNKTION: VISA ORDERVY =========
     function displayOrder(order) {
-      // Bygg en tabell för line_items
+      // Tabell för line_items
       const lineItemsHtml = Object.values(order.line_items || {}).map(item => {
         return `
           <tr>
@@ -145,24 +158,26 @@
         `;
       }).join("");
 
-      // Bygg en tabell för coupon_lines
+      // Tabell för coupon_lines
       let couponLinesHtml = "";
       if (order.coupon_lines && Object.keys(order.coupon_lines).length > 0) {
         couponLinesHtml = Object.values(order.coupon_lines).map(coupon => {
-          const metaDataList = coupon.meta_data.map(m => `<li>${m.key}: ${m.value}</li>`).join('');
+          const metaDataList = coupon.meta_data
+            .map(m => `<li>${m.key}: ${m.value}</li>`)
+            .join('');
           return `
             <tr>
               <td>${coupon.id}</td>
               <td>${coupon.code}</td>
               <td>${coupon.discount}</td>
               <td>${coupon.discount_tax}</td>
-              <td><ul>${metaDataList}</ul></td>
+              <td><ul class="mb-0">${metaDataList}</ul></td>
             </tr>
           `;
         }).join("");
       }
 
-      // Bygg en tabell för meta_data (Custom Fields)
+      // Tabell för meta_data
       const metaDataHtml = (order.meta_data || []).map(md => {
         return `
           <tr>
@@ -172,12 +187,12 @@
         `;
       }).join("");
 
-      // Bygg en lista av order_comments
+      // Ordernoteringar
       let orderNotesHtml = "";
       if (order.order_comments) {
         orderNotesHtml = order.order_comments.map(note => {
           return `
-            <div class="notes">
+            <div class="alert alert-secondary mb-2">
               <p><strong>Comment:</strong> ${note.content}</p>
               <p><strong>Date:</strong> ${note.date_created.date}</p>
               <p><strong>Added By:</strong> ${note.added_by}</p>
@@ -186,12 +201,12 @@
         }).join("");
       }
 
-      // Bygg shipping info
+      // Shipping-info
       let shippingHtml = "";
       if (order.shipping) {
         shippingHtml = `
-          <div class="section">
-            <h2>Shipping</h2>
+          <div class="mb-3">
+            <h5>Shipping</h5>
             <p><strong>Namn:</strong> ${order.shipping.first_name} ${order.shipping.last_name}</p>
             <p><strong>Adress:</strong> ${order.shipping.address_1} ${order.shipping.address_2}, ${order.shipping.postcode} ${order.shipping.city}</p>
             <p><strong>Telefon:</strong> ${order.shipping.phone || ''}</p>
@@ -199,82 +214,134 @@
         `;
       }
 
-      // Generera all HTML
+      // HTML för hela sidan
       const html = `
-        <div class="container">
-          <div class="main-content">
-            <div class="section">
-              <h2>Order #${order.id} (${order.number || ''})</h2>
-              <p><strong>Status:</strong> ${order.status}</p>
-              <p><strong>Betalning via:</strong> ${order.payment_method} - ${order.payment_method_title || ''}</p>
-              <p><strong>Transaction ID:</strong> ${order.transaction_id}</p>
-              <p><strong>Total:</strong> ${order.total}</p>
-              <p><strong>Moms:</strong> ${order.total_tax}</p>
-              <p><strong>Frakt:</strong> ${order.shipping_total}</p>
+        <div class="row">
+          <!-- Vänstra kolumnen (huvudsaklig orderinfo) -->
+          <div class="col-lg-8 mb-4">
+            <!-- Orderinfo (utan total, moms, frakt) -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Order #${order.id} (${order.number || ''})</h5>
+                <p><strong>Status:</strong> ${order.status}</p>
+                <p><strong>Betalning via:</strong> ${order.payment_method} - ${order.payment_method_title || ''}</p>
+                <p><strong>Transaction ID:</strong> ${order.transaction_id}</p>
+              </div>
             </div>
-            <div class="section">
-              <h2>Billing</h2>
-              <p><strong>Namn:</strong> ${order.billing.first_name} ${order.billing.last_name}</p>
-              <p><strong>Adress:</strong> ${order.billing.address_1} ${order.billing.address_2}, ${order.billing.postcode} ${order.billing.city}</p>
-              <p><strong>Email:</strong> ${order.billing.email}</p>
-              <p><strong>Telefon:</strong> ${order.billing.phone}</p>
+
+            <!-- Billing -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Billing</h5>
+                <p><strong>Namn:</strong> ${order.billing.first_name} ${order.billing.last_name}</p>
+                <p><strong>Adress:</strong> ${order.billing.address_1} ${order.billing.address_2}, ${order.billing.postcode} ${order.billing.city}</p>
+                <p><strong>Email:</strong> ${order.billing.email}</p>
+                <p><strong>Telefon:</strong> ${order.billing.phone}</p>
+              </div>
             </div>
-            ${shippingHtml}
-            <div class="section">
-              <h2>Produkter</h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Produkt</th>
-                    <th>Subtotal</th>
-                    <th>Antal</th>
-                    <th>Total</th>
-                    <th>Moms</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${lineItemsHtml}
-                </tbody>
-              </table>
+
+            <!-- Shipping (om det finns) -->
+            ${
+              shippingHtml 
+                ? `<div class="card mb-3"><div class="card-body">${shippingHtml}</div></div>` 
+                : ''
+            }
+
+            <!-- Produkter -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Produkter</h5>
+                <div class="table-responsive">
+                  <table class="table table-bordered table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Produkt</th>
+                        <th>Subtotal</th>
+                        <th>Antal</th>
+                        <th>Total</th>
+                        <th>Moms</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${lineItemsHtml}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-            ${couponLinesHtml ? `
-              <div class="section">
-                <h2>Kuponger</h2>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Kod</th>
-                      <th>Rabatt</th>
-                      <th>Rabatt Skatt</th>
-                      <th>Meta Data</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    ${couponLinesHtml}
-                  </tbody>
-                </table>
-              </div>` : ""}
+
+            <!-- Kuponger (om de finns) -->
+            ${
+              couponLinesHtml
+                ? `
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Kuponger</h5>
+                      <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                          <thead class="table-light">
+                            <tr>
+                              <th>ID</th>
+                              <th>Kod</th>
+                              <th>Rabatt</th>
+                              <th>Rabatt Skatt</th>
+                              <th>Meta Data</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            ${couponLinesHtml}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                `
+                : ''
+            }
+
+            <!-- Ordersummering (Total, Moms, Frakt) -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Ordersummering</h5>
+                <p><strong>Total:</strong> ${order.total}</p>
+                <p><strong>Moms:</strong> ${order.total_tax}</p>
+                <p><strong>Frakt:</strong> ${order.shipping_total}</p>
+              </div>
+            </div>
           </div>
-          <div class="sidebar">
-            <h2>Ordernoteringar</h2>
-            ${orderNotesHtml}
+
+          <!-- Högra kolumnen (ordernoteringar) -->
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Ordernoteringar</h5>
+                ${orderNotesHtml}
+              </div>
+            </div>
           </div>
         </div>
-        <div class="container">
-          <div class="section" style="width: 100%;">
-            <h2>Custom Fields (meta_data)</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Key</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${metaDataHtml}
-              </tbody>
-            </table>
+
+        <!-- Custom Fields (meta_data) -->
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Custom Fields (meta_data)</h5>
+                <div class="table-responsive">
+                  <table class="table table-bordered table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${metaDataHtml}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       `;
@@ -282,7 +349,7 @@
       document.getElementById('orderContainer').innerHTML = html;
     }
 
-    // Nerladdningsfunktion
+    // ========= NEDLADDNINGSFUNKTION =========
     function downloadFile(content, filename) {
       const blob = new Blob([JSON.stringify(content, null, 2)], { type: "application/json" });
       const link = document.createElement("a");
@@ -293,7 +360,7 @@
       document.body.removeChild(link);
     }
 
-    // Nedladdningsknappar
+    // ========= NEDLADDNINGSKNAPPAR =========
     document.getElementById("downloadIntegrationOrder").addEventListener("click", () => {
       if (window.jsonData) {
         const firstOrderKey = Object.keys(window.jsonData.orders)[0];
