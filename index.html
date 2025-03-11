@@ -18,23 +18,32 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .upload-section h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #0073aa;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
     }
     .container {
-      display: flex;
       max-width: 1200px;
       margin: 20px auto;
       background: white;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
     }
     .main-content {
       flex: 2;
-      padding-right: 20px;
+      margin-right: 20px;
     }
     .sidebar {
       flex: 1;
@@ -49,50 +58,46 @@
       background: #fff;
       border-radius: 5px;
     }
-    h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 15px;
     }
-    th,
-    td {
+    th, td {
       border: 1px solid #ddd;
       padding: 8px;
       text-align: left;
     }
-    .order-actions {
-      margin-top: 10px;
+    .section h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
     }
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      margin: 5px;
-      background: #0073aa;
-      color: white;
-      text-decoration: none;
+    .notes {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px dashed #ccc;
       border-radius: 5px;
-    }
-    .btn-danger {
-      background: #d63638;
+      background-color: #fafafa;
     }
   </style>
 </head>
 <body>
-  <!-- Avsnitt för att ladda upp JSON-fil -->
   <div class="upload-section">
-    <h2>Ladda upp JSON-fil</h2>
-    <input type="file" id="jsonFileInput" accept=".json">
+    <div>
+      <h2>Ladda upp JSON-fil</h2>
+      <input type="file" id="jsonFileInput" accept=".json">
+    </div>
+    <div>
+      <button class="btn" id="downloadIntegrationOrder">Ladda ner Integration Order</button>
+      <button class="btn" id="downloadSystemReport">Ladda ner System Report</button>
+      <button class="btn" id="downloadLogs">Ladda ner Logs</button>
+    </div>
   </div>
 
-  <!-- Här renderas ordern -->
   <div id="orderContainer"></div>
 
   <script>
-    // När en fil väljs läses innehållet in
+    // Läser in vald JSON och visar order
     document.getElementById('jsonFileInput').addEventListener('change', function (event) {
       const file = event.target.files[0];
       if (!file) return;
@@ -100,15 +105,23 @@
       reader.onload = function(e) {
         try {
           const data = JSON.parse(e.target.result);
-          // Anta att det finns minst en order och välj den första
-          const orderKeys = Object.keys(data.orders);
-          if (orderKeys.length === 0) {
-            alert("Ingen order hittades i JSON‑filen.");
-            return;
+          // Kontrollera att 'orders' finns och inte är tomt
+          if (!data.orders || Object.keys(data.orders).length === 0) {
+            throw new Error("Ogiltigt JSON-format: 'orders' saknas eller är tom.");
           }
-          const orderId = orderKeys[0];
-          const order = data.orders[orderId].wc_order;
-          displayOrder(order);
+
+          window.jsonData = data;
+          // Hämta första ordern
+          const firstOrderKey = Object.keys(data.orders)[0];
+          const selectedOrder = data.orders[firstOrderKey];
+
+          // Kontrollera att wc_order finns
+          if (!selectedOrder.wc_order) {
+            throw new Error("wc_order saknas i den valda ordern.");
+          }
+
+          // Visa order
+          displayOrder(selectedOrder.wc_order);
         } catch (error) {
           console.error("Fel vid tolkning av JSON:", error);
           alert("Kunde inte läsa in JSON‑filen. Kontrollera att filen har rätt format.");
@@ -117,120 +130,205 @@
       reader.readAsText(file);
     });
 
-    // Funktion som renderar orderdetaljer med samma layout som i din ursprungliga fil
+    // Funktion som renderar ordern på sidan
     function displayOrder(order) {
-      const orderLines = Object.values(order.line_items).map(line => `
-        <tr>
-            <td>${line.name}</td>
-            <td>${line.subtotal}</td>
-            <td>${line.quantity}</td>
-            <td>${line.total}</td>
-            <td>${line.total_tax}</td>
-        </tr>
-      `).join('');
+      // Bygg en tabell för line_items
+      const lineItemsHtml = Object.values(order.line_items || {}).map(item => {
+        return `
+          <tr>
+            <td>${item.name}</td>
+            <td>${item.subtotal}</td>
+            <td>${item.quantity}</td>
+            <td>${item.total}</td>
+            <td>${item.total_tax}</td>
+          </tr>
+        `;
+      }).join("");
 
-      const couponLines = Object.values(order.coupon_lines).map(coupon => `
-        <tr>
-          <td>${coupon.id}</td>
-          <td>${coupon.code}</td>
-          <td>${coupon.discount}</td>
-          <td>${coupon.discount_tax}</td>
-          <td>
-            <ul>
-              ${coupon.meta_data.map(meta => `<li>${meta.key}: ${meta.value}</li>`).join('')}
-            </ul>
-          </td>
-        </tr>
-      `).join('');
+      // Bygg en tabell för coupon_lines
+      let couponLinesHtml = "";
+      if (order.coupon_lines && Object.keys(order.coupon_lines).length > 0) {
+        couponLinesHtml = Object.values(order.coupon_lines).map(coupon => {
+          const metaDataList = coupon.meta_data.map(m => `<li>${m.key}: ${m.value}</li>`).join('');
+          return `
+            <tr>
+              <td>${coupon.id}</td>
+              <td>${coupon.code}</td>
+              <td>${coupon.discount}</td>
+              <td>${coupon.discount_tax}</td>
+              <td><ul>${metaDataList}</ul></td>
+            </tr>
+          `;
+        }).join("");
+      }
 
-      const metaData = order.meta_data.map(d => `
-        <tr>
-          <td>${d.key}</td>
-          <td>${d.value}</td>
-        </tr>
-      `).join('');
+      // Bygg en tabell för meta_data (Custom Fields)
+      const metaDataHtml = (order.meta_data || []).map(md => {
+        return `
+          <tr>
+            <td>${md.key}</td>
+            <td>${typeof md.value === 'object' ? JSON.stringify(md.value) : md.value}</td>
+          </tr>
+        `;
+      }).join("");
 
-      const orderNotes = Object.values(order.order_comments).map(note => `
-        <div class="section">
-          <p>${note.content}</p>
-          <p>Added by: ${note.added_by}</p>
-          <p>${note.date_created.date}</p>
-          ${note.customer_note ? '<p>Customer Note</p>' : ''}
-        </div>
-      `).join('');
+      // Bygg en lista av order_comments
+      let orderNotesHtml = "";
+      if (order.order_comments) {
+        orderNotesHtml = order.order_comments.map(note => {
+          return `
+            <div class="notes">
+              <p><strong>Comment:</strong> ${note.content}</p>
+              <p><strong>Date:</strong> ${note.date_created.date}</p>
+              <p><strong>Added By:</strong> ${note.added_by}</p>
+            </div>
+          `;
+        }).join("");
+      }
 
-      const templateString = `
+      // Bygg shipping info
+      let shippingHtml = "";
+      if (order.shipping) {
+        shippingHtml = `
+          <div class="section">
+            <h2>Shipping</h2>
+            <p><strong>Namn:</strong> ${order.shipping.first_name} ${order.shipping.last_name}</p>
+            <p><strong>Adress:</strong> ${order.shipping.address_1} ${order.shipping.address_2}, ${order.shipping.postcode} ${order.shipping.city}</p>
+            <p><strong>Telefon:</strong> ${order.shipping.phone || ''}</p>
+          </div>
+        `;
+      }
+
+      // Generera all HTML
+      const html = `
         <div class="container">
           <div class="main-content">
             <div class="section">
-              <h2>Order #${order.id} ${order.number}</h2>
-              <p><strong>Betalning via ${order.payment_method}. Transaction ID:</strong> ${order.transaction_id}</p>
-              <p><strong>Date paid:</strong> ${order.date_paid.date}</p>
+              <h2>Order #${order.id} (${order.number || ''})</h2>
               <p><strong>Status:</strong> ${order.status}</p>
+              <p><strong>Betalning via:</strong> ${order.payment_method} - ${order.payment_method_title || ''}</p>
+              <p><strong>Transaction ID:</strong> ${order.transaction_id}</p>
+              <p><strong>Total:</strong> ${order.total}</p>
+              <p><strong>Moms:</strong> ${order.total_tax}</p>
+              <p><strong>Frakt:</strong> ${order.shipping_total}</p>
             </div>
             <div class="section">
               <h2>Billing</h2>
-              <p><strong>Company:</strong> ${order.billing.company}</p>
               <p><strong>Namn:</strong> ${order.billing.first_name} ${order.billing.last_name}</p>
               <p><strong>Adress:</strong> ${order.billing.address_1} ${order.billing.address_2}, ${order.billing.postcode} ${order.billing.city}</p>
               <p><strong>Email:</strong> ${order.billing.email}</p>
               <p><strong>Telefon:</strong> ${order.billing.phone}</p>
             </div>
+            ${shippingHtml}
             <div class="section">
-              <h2>Shipping</h2>
-              <p><strong>Namn:</strong> ${order.shipping.first_name} ${order.shipping.last_name}</p>
-              <p><strong>Adress:</strong> ${order.shipping.address_1} ${order.shipping.address_2}, ${order.shipping.postcode} ${order.shipping.city}</p>
-              <p><strong>Telefon:</strong> ${order.shipping.phone}</p>
-            </div>
-            <div class="section">
-              <h2>Orderdetaljer</h2>
+              <h2>Produkter</h2>
               <table>
-                <tr>
-                    <th>Namn</th>
-                    <th>Kostnad</th>
-                    <th>Antal</th>
-                    <th>Total</th>
-                    <th>VAT</th>
-                </tr>
-                ${orderLines}
-              </table>
-              <table border="1">
                 <thead>
                   <tr>
-                    <th>Kupong ID</th>
-                    <th>Kod</th>
-                    <th>Rabatt</th>
-                    <th>Rabatt Skatt</th>
-                    <th>Meta Data</th>
+                    <th>Produkt</th>
+                    <th>Subtotal</th>
+                    <th>Antal</th>
+                    <th>Total</th>
+                    <th>Moms</th>
                   </tr>
                 </thead>
                 <tbody>
-                  ${couponLines}
+                  ${lineItemsHtml}
                 </tbody>
               </table>
-              <p><strong>Frakt:</strong> ${order.shipping_total} kr</p>
-              <p><strong>Moms:</strong> ${order.total_tax}</p>
-              <p><strong>Totalt:</strong> ${order.total}</p>
             </div>
+            ${couponLinesHtml ? `
+              <div class="section">
+                <h2>Kuponger</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Kod</th>
+                      <th>Rabatt</th>
+                      <th>Rabatt Skatt</th>
+                      <th>Meta Data</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${couponLinesHtml}
+                  </tbody>
+                </table>
+              </div>` : ""}
           </div>
           <div class="sidebar">
             <h2>Ordernoteringar</h2>
-            ${orderNotes}
+            ${orderNotesHtml}
           </div>
         </div>
-        <div class="section">
-          <h2>Custom Fields</h2>
-          <table>
-            <tr>
-              <th>Key</th>
-              <th>Value</th>
-            </tr>
-            ${metaData}
-          </table>
+        <div class="container">
+          <div class="section" style="width: 100%;">
+            <h2>Custom Fields (meta_data)</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${metaDataHtml}
+              </tbody>
+            </table>
+          </div>
         </div>
       `;
-      document.getElementById('orderContainer').innerHTML = templateString;
+
+      document.getElementById('orderContainer').innerHTML = html;
     }
+
+    // Nerladdningsfunktion
+    function downloadFile(content, filename) {
+      const blob = new Blob([JSON.stringify(content, null, 2)], { type: "application/json" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Nedladdningsknappar
+    document.getElementById("downloadIntegrationOrder").addEventListener("click", () => {
+      if (window.jsonData) {
+        const firstOrderKey = Object.keys(window.jsonData.orders)[0];
+        const orderObj = window.jsonData.orders[firstOrderKey];
+        if (orderObj.integration_order) {
+          downloadFile(orderObj.integration_order, "integration_order.json");
+        } else {
+          alert("Ingen integration_order hittades.");
+        }
+      } else {
+        alert("Ingen JSON-data är inläst.");
+      }
+    });
+
+    document.getElementById("downloadSystemReport").addEventListener("click", () => {
+      if (window.jsonData && window.jsonData.system_report) {
+        downloadFile(window.jsonData.system_report, "system_report.json");
+      } else {
+        alert("Ingen system_report hittades.");
+      }
+    });
+
+    document.getElementById("downloadLogs").addEventListener("click", () => {
+      if (window.jsonData) {
+        const firstOrderKey = Object.keys(window.jsonData.orders)[0];
+        const orderObj = window.jsonData.orders[firstOrderKey];
+        if (orderObj.logs) {
+          downloadFile(orderObj.logs, "logs.json");
+        } else {
+          alert("Inga loggar hittades.");
+        }
+      } else {
+        alert("Ingen JSON-data är inläst.");
+      }
+    });
   </script>
 </body>
 </html>
