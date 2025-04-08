@@ -159,7 +159,6 @@
       }).join("");
 
       // 2) Tabell för shipping_lines
-      //    (Visas efter ”Produkter” för att se fraktmetoder)
       let shippingLinesHtml = "";
       if (order.shipping_lines && Object.keys(order.shipping_lines).length > 0) {
         shippingLinesHtml = Object.values(order.shipping_lines).map(line => {
@@ -232,7 +231,6 @@
       }
 
       // 7) Extra: Beräkna items-subtotal
-      //    Summan av line_items -> subtotal
       let itemsSubtotal = 0;
       Object.values(order.line_items || {}).forEach(item => {
         itemsSubtotal += parseFloat(item.subtotal || 0);
@@ -241,7 +239,6 @@
       // 8) Kolla om ordern är betald -> Visa "Paid: x.xx kr"
       let paidHtml = "";
       if (order.date_paid && order.date_paid.date) {
-        // Om date_paid inte är null => antar att ordern är betald
         paidHtml = `<hr><p><strong>Paid:</strong> ${order.total} kr</p>`;
       }
 
@@ -250,7 +247,6 @@
         <div class="row">
           <!-- Vänstra kolumnen (huvudsaklig orderinfo) -->
           <div class="col-lg-8 mb-4">
-            <!-- Orderinfo (utan total, moms, frakt) -->
             <div class="card mb-3">
               <div class="card-body">
                 <h5 class="card-title">Order #${order.id} (${order.number || ''})</h5>
@@ -260,7 +256,6 @@
               </div>
             </div>
 
-            <!-- Billing -->
             <div class="card mb-3">
               <div class="card-body">
                 <h5 class="card-title">Billing</h5>
@@ -271,14 +266,12 @@
               </div>
             </div>
 
-            <!-- Shipping (om det finns) -->
             ${
               shippingHtml 
                 ? `<div class="card mb-3"><div class="card-body">${shippingHtml}</div></div>` 
                 : ''
             }
 
-            <!-- Produkter -->
             <div class="card mb-3">
               <div class="card-body">
                 <h5 class="card-title">Produkter</h5>
@@ -301,7 +294,6 @@
               </div>
             </div>
 
-            <!-- Shipping lines (efter Produkter) -->
             ${
               shippingLinesHtml 
                 ? `
@@ -330,7 +322,6 @@
                 : ''
             }
 
-            <!-- Kuponger (om de finns) -->
             ${
               couponLinesHtml
                 ? `
@@ -359,7 +350,6 @@
                 : ''
             }
 
-            <!-- Ordersummering (Items Subtotal, Coupon(s), Shipping, VAT, Total, ev. Paid) -->
             <div class="card mb-3">
               <div class="card-body">
                 <h5 class="card-title">Ordersummering</h5>
@@ -416,7 +406,7 @@
       document.getElementById('orderContainer').innerHTML = html;
     }
 
-    // ========= NEDLADDNINGSFUNKTION =========
+    // ========= NEDLADDNINGSFUNKTION (för Integration Order och System Report) =========
     function downloadFile(content, filename) {
       const blob = new Blob([JSON.stringify(content, null, 2)], { type: "application/json" });
       const link = document.createElement("a");
@@ -450,12 +440,30 @@
       }
     });
 
+    // ========= NEDLADDNINGSKNAPP: LOGGAR =========
     document.getElementById("downloadLogs").addEventListener("click", () => {
       if (window.jsonData) {
         const firstOrderKey = Object.keys(window.jsonData.orders)[0];
         const orderObj = window.jsonData.orders[firstOrderKey];
         if (orderObj.logs) {
-          downloadFile(orderObj.logs, "logs.json");
+          if (!Array.isArray(orderObj.logs)) {
+            alert("Loggarna är inte i rätt format (förväntas vara en array).");
+            return;
+          }
+          // Omvandla loggarna: varje loggpost på en egen rad
+          const formattedLogs = orderObj.logs.join("\n");
+          const blob = new Blob([formattedLogs], { type: "text/plain" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          // Skapa ett filnamn med dagens datum, t.ex. "klarna_payments-2025-04-08.log"
+          const date = new Date();
+          const year = date.getFullYear();
+          const month = ("0" + (date.getMonth() + 1)).slice(-2);
+          const day = ("0" + date.getDate()).slice(-2);
+          link.download = `klarna_payments-${year}-${month}-${day}.log`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
         } else {
           alert("Inga loggar hittades.");
         }
